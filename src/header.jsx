@@ -32,27 +32,29 @@ const Header = () => {
           menuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        {[
-          "About Us",
-          "Books",
-          "Workshops",
-          "Gallery",
-          "Lets Collaborate",
-          "Shop",
-          "Contact",
-        ].map((item, index) => (
-          <Link
-            key={index}
-            to={item.toLowerCase().replace(" ", "-")} // Matches the id in Section
-            smooth
-            duration={500}
-            offset={-64} // Adjust offset for header
-            className="cursor-pointer text-black font-semibold hover:underline transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-[-5px] hover:shadow-lg hover:text-orange-400"
-            onClick={() => setMenuOpen(false)}
-          >
-            {item}
-          </Link>
-        ))}
+        <div className="flex flex-col items-center space-y-4 lg:space-y-0">
+          {[
+            "About Us",
+            "Books",
+            "Workshops",
+            "Gallery",
+            "Lets Collaborate",
+            "Shop",
+            "Contact",
+          ].map((item, index) => (
+            <Link
+              key={index}
+              to={item.toLowerCase().replace(" ", "-")} // Matches the id in Section
+              smooth
+              duration={500}
+              offset={-64} // Adjust offset for header
+              className="cursor-pointer text-black text-lg lg:text-base font-semibold hover:underline transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-[-5px] hover:shadow-lg hover:text-orange-400"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item}
+            </Link>
+          ))}
+        </div>
       </nav>
     </header>
   );
