@@ -1,6 +1,8 @@
 import Header from './header';
 import Section from './section';
 import Gallery from './Tempgallery';
+import Footer from './footer';  // The casing should match the file name
+import 'animate.css';
 
 const App = () => (
   <div className="bg-white text-black-600">
@@ -14,6 +16,8 @@ const App = () => (
       <Section id="shop" title="Shop">Shop-related details.</Section>
       <Section id="contact" title="Contact">Contact details.</Section>
     </main>
+
+    <Footer />  {/* Add the Footer component here */}
   </div>
 );
 
