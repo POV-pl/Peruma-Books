@@ -46,8 +46,8 @@ const Header = () => {
                 smooth
                 duration={500}
                 offset={-64} // Adjust offset for header
-                className="relative cursor-pointer text-black text-lg lg:text-base font-semibold transition duration-300 ease-in-out hover:text-orange-400 
-  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
+                className="relative cursor-pointer text-black text-lg lg:text-base font-semibold transition duration-400 ease-in-out hover:text-orange-400 
+  after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-orange-400 after:transition-all after:duration-500 after:ease-in-out hover:after:w-full"
                 onClick={() => setMenuOpen(false)}
               >
                 {item}
