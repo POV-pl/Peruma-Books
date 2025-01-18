@@ -28,11 +28,9 @@ const Header = () => {
       <nav
         className={`${
           menuOpen ? "block" : "hidden"
-        } lg:flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-5 absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none p-4 lg:p-0 transform lg:transform-none transition-transform duration-300 ease-in-out ${
-          menuOpen ? "translate-y-0" : "-translate-y-full"
-        }`}
+        } lg:flex lg:items-center absolute lg:static top-16 left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none p-4 lg:p-0 transition-all duration-300 ease-in-out`}
       >
-        <div className="flex flex-col items-center space-y-4 lg:space-y-0">
+        <ul className="flex flex-col lg:flex-row gap-4 lg:gap-8 items-center">
           {[
             "About Us",
             "Books",
@@ -42,19 +40,20 @@ const Header = () => {
             "Shop",
             "Contact",
           ].map((item, index) => (
-            <Link
-              key={index}
-              to={item.toLowerCase().replace(" ", "-")} // Matches the id in Section
-              smooth
-              duration={500}
-              offset={-64} // Adjust offset for header
-              className="cursor-pointer text-black text-lg lg:text-base font-semibold hover:underline transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-[-5px] hover:shadow-lg hover:text-orange-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item}
-            </Link>
+            <li key={index}>
+              <Link
+                to={item.toLowerCase().replace(" ", "-")} // Matches the id in Section
+                smooth
+                duration={500}
+                offset={-64} // Adjust offset for header
+                className="cursor-pointer text-black text-lg lg:text-base font-semibold hover:underline transform transition duration-300 ease-in-out hover:scale-105 hover:translate-y-[-2px] hover:text-orange-400"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item}
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </nav>
     </header>
   );
