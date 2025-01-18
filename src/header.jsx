@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between items-center p-4 bg-gradient-to-r from-transparent to-blue-300 shadow-md fixed w-full z-10">
+    <header className="flex justify-between items-center p-4 bg-gradient-to-l from-blue-500 via-blue-400 to-blue-100 bg-opacity-100 text-white fixed w-full z-50 border-b border-gray-300">
       {/* Logo on the top-left */}
       <div className="flex items-center">
         <img src={Logo} alt="PRM Logo" className="h-16 w-auto" />
