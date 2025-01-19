@@ -37,7 +37,7 @@ const BookGallery = () => {
     {
       id: 1,
       title: "Binary Coding Activities",
-      author: "Dr. Pushpa Latha",
+      author: "Dr. Pushpalatha G S",
       cover: "../books/book1.png",
       insideImages: [
         "../books/book1.1.png",
@@ -50,7 +50,7 @@ const BookGallery = () => {
     {
       id: 2,
       title: "GRAPHS",
-      author: "Dr. Pushpa Latha",
+      author: "Dr. Pushpalatha G S",
       cover: "../books/book2.png",
       insideImages: ["../books/book2.1.png", "../books/book2.2.png"],
       description:
@@ -59,7 +59,7 @@ const BookGallery = () => {
     {
       id: 3,
       title: "Inspiring Personalities",
-      author: "Dr. Pushpa Latha",
+      author: "Dr. Pushpalatha G S",
       cover: "../books/book3.png",
       insideImages: ["../books/book3.1.png", "../books/book3.2.png"],
       description:
@@ -187,13 +187,13 @@ const BookGallery = () => {
               {
                 icon: User,
                 title: "Author",
-                value: "Dr. Pushpa Latha",
+                value: "Dr. Pushpalatha G S",
                 color: "green",
               },
               {
                 icon: Mail,
                 title: "Contact",
-                value: "info@example.com",
+                value: "perumabooks@gmail.com",
                 color: "purple",
               },
             ].map((stat, index) => (
