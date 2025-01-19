@@ -122,12 +122,12 @@ const BookGallery = () => {
                 <div
                   key={book.id}
                   className="flex-none scroll-snap-align-start"
-                  style={{
-                    transform: `translateY(${
-                      Math.sin(scrollPosition / 100 + index) * 10
-                    }px)`,
-                    transition: "transform 0.3s ease-out",
-                  }}
+                  // style={{
+                  //   transform: `translateY(${
+                  //     Math.sin(scrollPosition / 100 + index) * 10
+                  //   }px)`,
+                  //   transition: "transform 0.3s ease-out",
+                  // }}
                 >
                   <div
                     className="relative group cursor-pointer"
