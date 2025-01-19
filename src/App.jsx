@@ -1,9 +1,10 @@
-import React from 'react';
-import Header from './header';
-import AboutUs from './AboutUs';
-import Footer from './footer';
+import React from "react";
+import Header from "./header";
+import AboutUs from "./AboutUs";
+import Footer from "./footer";
 import Logo from "./assests/PRM_Logo-removebg-preview.png";
 import Logo2 from "./assests/full-logo-peruma.png";
+import BookGallery from "./Books";
 
 const App = () => {
   return (
@@ -35,7 +36,7 @@ const App = () => {
                     className="h-28 w-auto object-contain"
                   />
                 </div>
-                
+
                 <div className="space-y-4 pt-4">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-title">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
@@ -51,9 +52,11 @@ const App = () => {
                 </div>
 
                 <div className="flex justify-center lg:justify-start pt-4">
-                  <button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-lg font-medium 
+                  <button
+                    className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-lg font-medium 
                     shadow-lg transition-all duration-300 animate-button
-                    hover:shadow-xl hover:-translate-y-1">
+                    hover:shadow-xl hover:-translate-y-1"
+                  >
                     Explore Our Collection
                   </button>
                 </div>
@@ -78,20 +81,24 @@ const App = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 {[
-                  { number: "50+", label: "Educational Books" },
+                  { number: "13+", label: "Educational Books" },
                   { number: "1000+", label: "Happy Students" },
                   { number: "100+", label: "Schools" },
-                  { number: "15+", label: "Years Experience" }
+                  { number: "15+", label: "Years Experience" },
                 ].map((stat, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="p-4 transform transition-all duration-300 hover:-translate-y-1 animate-stats"
                     style={{
-                      animationDelay: `${index * 100}ms`
+                      animationDelay: `${index * 100}ms`,
                     }}
                   >
-                    <div className="text-2xl md:text-3xl font-bold mb-2">{stat.number}</div>
-                    <div className="text-blue-100 text-sm md:text-base">{stat.label}</div>
+                    <div className="text-2xl md:text-3xl font-bold mb-2">
+                      {stat.number}
+                    </div>
+                    <div className="text-blue-100 text-sm md:text-base">
+                      {stat.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -103,11 +110,19 @@ const App = () => {
           <AboutUs />
         </section>
       </main>
+      <section id="books" className="px-4">
+        <BookGallery />
+      </section>
 
       <style jsx global>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
         }
 
         @keyframes fadeSlideUp {
@@ -122,8 +137,12 @@ const App = () => {
         }
 
         @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         .animate-float {
@@ -159,7 +178,6 @@ const App = () => {
           animation: fadeSlideUp 0.6s ease-out forwards;
         }
       `}</style>
-
       <Footer />
     </div>
   );
