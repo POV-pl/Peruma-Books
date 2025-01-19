@@ -167,21 +167,6 @@ const AboutUs = () => {
         )}
 
         {/* Mission Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="max-w-4xl mx-auto mt-20 bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
-        >
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Commitment to Education</h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            PERUMA is dedicated to revolutionizing education through Activity-Based Learning. 
-            Our carefully crafted books encourage hands-on exploration, creative thinking, and 
-            collaborative learning. We believe that education should be an engaging journey of 
-            discovery, where each student can learn at their own pace while developing essential 
-            life skills.
-          </p>
-        </motion.div>
       </motion.div>
     </div>
   );
