@@ -23,7 +23,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 text-white py-16 mt-8">
+    <footer className="bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 text-white py-16 mt-8 relative">
       <div className="max-w-screen-xl mx-auto px-8">
         <div className="flex justify-between items-center text-lg font-semibold text-white animate__animated animate__fadeIn animate__delay-1s">
           {/* Footer company name */}
