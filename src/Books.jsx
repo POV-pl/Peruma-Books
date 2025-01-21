@@ -102,9 +102,9 @@ const BookGallery = () => {
     },
     {
       id: 5,
-      title: "MATHEMATICAL CONCEPTS",
-      price: "₹299.00",
-      pages: "64",
+      title: "CRYPTIC MESSAGES",
+      price: "₹99.00",
+      pages: "32",
       cover: "../books/book5.png",
       insideImages: [
         "../books/book5.1.png",
@@ -113,9 +113,9 @@ const BookGallery = () => {
         "../books/book5.4.png",
       ],
       description:
-        "Advanced mathematical concepts with practical examples 🔹 Problem-solving techniques 🔹 Step-by-step solutions 🔹 Practice exercises",
+        "Secrect Code concepts🔹 Problem-solving techniques 🔹 Step-by-step solutions 🔹 Practice exercises 🔹 Answers",
       highlights: [
-        "25 Math Topics",
+        "Cryptic Code",
         "Real-world Applications",
         "Detailed Solutions",
         "Practice Sets",
@@ -123,9 +123,9 @@ const BookGallery = () => {
     },
     {
       id: 6,
-      title: "SCIENCE EXPERIMENTS",
-      price: "₹249.00",
-      pages: "56",
+      title: "MATH PUZZLES",
+      price: "₹99.00",
+      pages: "48",
       cover: "../books/book6.png",
       insideImages: [
         "../books/book6.1.png",
@@ -134,19 +134,19 @@ const BookGallery = () => {
         "../books/book6.4.png",
       ],
       description:
-        "Hands-on science experiments 🔹 Safety guidelines 🔹 Material lists 🔹 Expected outcomes 🔹 Scientific explanations",
+        "Math/Problem solving Concepts 🔹 Self-assessment Activity 🔹 50 Activites 🔹 Instructions 🔹 Answers",
       highlights: [
-        "30 Experiments",
-        "Safety First Approach",
+        "50 Activites",
+        "Logic First Approach",
         "Simple Materials",
         "Clear Instructions",
       ],
     },
     {
       id: 7,
-      title: "LOGICAL REASONING",
-      price: "₹199.00",
-      pages: "48",
+      title: "WISDOM IN WORDS",
+      price: "₹99.00",
+      pages: "36",
       cover: "../books/book7.png",
       insideImages: [
         "../books/book7.1.png",
@@ -155,19 +155,19 @@ const BookGallery = () => {
         "../books/book7.4.png",
       ],
       description:
-        "Develop critical thinking skills 🔹 Pattern recognition 🔹 Logical puzzles 🔹 Brain teasers",
+        "Concept of motivational quotes 🔹 90+ Quotes 🔹 Quiz 🔹 Answers",
       highlights: [
-        "40 Logic Puzzles",
-        "Critical Thinking",
-        "Pattern Recognition",
-        "Progressive Difficulty",
+        "Find your quotes",
+        "Motivational",
+        "Develops perspective",
+        "Positive thinking",
       ],
     },
     {
       id: 8,
-      title: "ENVIRONMENTAL SCIENCE",
-      price: "₹179.00",
-      pages: "52",
+      title: "SUDOKU",
+      price: "₹79.00",
+      pages: "32",
       cover: "../books/book8.png",
       insideImages: [
         "../books/book8.1.png",
@@ -176,19 +176,19 @@ const BookGallery = () => {
         "../books/book8.4.png",
       ],
       description:
-        "Learn about environment 🔹 Ecosystem studies 🔹 Conservation tips 🔹 Practical activities",
+        "Number Game / Problem solving🔹 Concepts 🔹 Instruction 🔹 24 Activites 🔹 Easy, Medium, Hard Levels",
       highlights: [
-        "20 Eco Projects",
-        "Conservation Tips",
-        "Interactive Learning",
-        "Real-world Examples",
+        "Improves concentration",
+        "Cognitive skills",
+        "Logical thinking",
+        "Enhanced memory",
       ],
     },
     {
       id: 9,
-      title: "CREATIVE WRITING",
-      price: "₹159.00",
-      pages: "44",
+      title: "MANDALA Colouring Art",
+      price: "₹79.00",
+      pages: "36",
       cover: "../books/book9.png",
       insideImages: [
         "../books/book9.1.png",
@@ -197,19 +197,19 @@ const BookGallery = () => {
         "../books/book9.4.png",
       ],
       description:
-        "Writing techniques 🔹 Story development 🔹 Character creation 🔹 Writing exercises",
+        "Colouring Concepts🔹 Instructions 🔹 34 Activities 🔹 Self-assessment Activity",
       highlights: [
-        "Writing Prompts",
-        "Story Structure",
-        "Character Development",
-        "Creative Exercises",
+        "stimulates Creativity",
+        "Develops Patience",
+        "Mind relaxation",
+        "Attention span",
       ],
     },
     {
       id: 10,
-      title: "GEOGRAPHY EXPLORER",
-      price: "₹229.00",
-      pages: "60",
+      title: "MANDALA for Balancing Hands",
+      price: "₹79.00",
+      pages: "32",
       cover: "../books/book10.png",
       insideImages: [
         "../books/book10.1.png",
@@ -218,19 +218,19 @@ const BookGallery = () => {
         "../books/book10.4.png",
       ],
       description:
-        "World geography 🔹 Map reading 🔹 Cultural studies 🔹 Interactive activities",
+        "Motor Skill improvement and Colouring Concepts🔹 Instructions 🔹 30 Activities 🔹 Self-assessment Activity 🔹Easy, Medium, Hard Levels",
       highlights: [
-        "Map Activities",
-        "Cultural Studies",
-        "Geographic Features",
-        "World Exploration",
+        "Cognitive skills",
+        "Balanced Hand Motions",
+        "Attention span",
+        "Improves concentration",
       ],
     },
     {
       id: 11,
-      title: "VOCABULARY BUILDER",
-      price: "₹149.00",
-      pages: "40",
+      title: "HIDDEN WORDS",
+      price: "₹79.00",
+      pages: "28",
       cover: "../books/book11.png",
       insideImages: [
         "../books/book11.1.png",
@@ -239,19 +239,19 @@ const BookGallery = () => {
         "../books/book11.4.png",
       ],
       description:
-        "Word power 🔹 Usage examples 🔹 Practice exercises 🔹 Word games",
+        "Word search concepts 🔹 26 Activites 🔹 Instruction 🔹 Answers 🔹 self-assessment Activity",
       highlights: [
-        "Word Games",
-        "Usage Examples",
-        "Memory Techniques",
-        "Daily Practice",
+        "Spelling skills",
+        "Short term memory",
+        "Observation skill",
+        "Learn new words",
       ],
     },
     {
       id: 12,
-      title: "HISTORY CHRONICLES",
-      price: "₹189.00",
-      pages: "58",
+      title: "TRACE THE PATTERNS",
+      price: "₹79.00",
+      pages: "28",
       cover: "../books/book12.png",
       insideImages: [
         "../books/book12.1.png",
@@ -259,20 +259,19 @@ const BookGallery = () => {
         "../books/book12.3.png",
         "../books/book12.4.png",
       ],
-      description:
-        "Historical events 🔹 Timeline activities 🔹 Important figures 🔹 Interactive learning",
+      description: "Handwriting improvement concept 🔹 50+ Activites",
       highlights: [
-        "Timeline Studies",
-        "Historical Figures",
-        "Event Analysis",
-        "Interactive Timeline",
+        "TDrawing skills",
+        "Fine motor skills",
+        "Focus and concentration",
+        "Symmetry and Geometry",
       ],
     },
     {
       id: 13,
-      title: "ART AND CRAFT",
-      price: "₹169.00",
-      pages: "46",
+      title: "CONSTRUCT WORDS",
+      price: "₹79.00",
+      pages: "32",
       cover: "../books/book13.png",
       insideImages: [
         "../books/book13.1.png",
@@ -281,12 +280,12 @@ const BookGallery = () => {
         "../books/book13.4.png",
       ],
       description:
-        "Creative projects 🔹 Step-by-step guides 🔹 Material lists 🔹 Skill development",
+        "Word Formation Concepts 🔹 Step-by-step guides 🔹 30 Activites 🔹 Answers",
       highlights: [
-        "DIY Projects",
-        "Skill Building",
-        "Creative Expression",
-        "Basic Techniques",
+        "New words",
+        "Spelling skills",
+        "Language skills",
+        "Sort-term memory",
       ],
     },
   ];
@@ -319,17 +318,17 @@ const BookGallery = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
       {showInterestMessage && (
         <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
-          Interest registered! We'll contact you soon.
+          Interest Noted!.
         </div>
       )}
 
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 relative">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Educational Book Collection
           </h1>
-          <p className="text-lg text-blue-600">
+          <p className="text-lg text-blue-500">
             Discover our comprehensive range of learning materials
           </p>
         </div>
@@ -337,13 +336,13 @@ const BookGallery = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 relative">
           {[
-            { icon: BookOpen, title: "Total Books", value: "13 Books" },
+            { icon: BookOpen, title: "Total Books", value: books.length },
             { icon: User, title: "Author", value: "Dr. Pushpalatha G S" },
             { icon: Mail, title: "Contact", value: "perumabooks@gmail.com" },
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900"
+              className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="bg-blue-100 p-3 rounded-lg">
                 <stat.icon className="w-6 h-6 text-blue-600" />
