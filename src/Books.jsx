@@ -92,8 +92,8 @@ const BookGallery = () => {
     },
     {
       id: 5,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "CRYPTIC MESSAGES",
+      price: "₹. 99.00 | No.of Pages - 32",
       cover: "../books/book5.png",
       insideImages: [
         "../books/book5.1.png",
@@ -102,12 +102,12 @@ const BookGallery = () => {
         "../books/book5.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Secret Code Concepts 🔹 Instructions 🔹 Answers 🔹 28 Activites 🔹 Illustrations",
     },
     {
       id: 6,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "MATH PUZZLES",
+      price: "₹. 99.00 | No.of Pages - 48",
       cover: "../books/book6.png",
       insideImages: [
         "../books/book6.1.png",
@@ -116,12 +116,12 @@ const BookGallery = () => {
         "../books/book6.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Math/Problem Solving Concepts 🔹 Instructions 🔹 Answers 🔹 50 Activites 🔹 Illustrations 🔹 Self-assessment Activity",
     },
     {
       id: 7,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "WISDOM IN WORDS",
+      price: "₹. 99.00 | No.of Pages - 36",
       cover: "../books/book7.png",
       insideImages: [
         "../books/book7.1.png",
@@ -130,12 +130,12 @@ const BookGallery = () => {
         "../books/book7.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Concept of motivational quotes 🔹 90+ Quotes 🔹 Answers 🔹 Quiz",
     },
     {
       id: 8,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "SUDOKU",
+      price: "₹. 79.00 | No.of Pages - 32",
       cover: "../books/book8.png",
       insideImages: [
         "../books/book8.1.png",
@@ -144,12 +144,12 @@ const BookGallery = () => {
         "../books/book8.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Number Game / Problem solving🔹 Instructions 🔹 Concepts 🔹 Answers 🔹 24 Activites 🔹 Easy, Medium & Hard Levels🔹 Self-assessment Activity",
     },
     {
       id: 9,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "MANDALA Colouring Art",
+      price: "₹. 79.00 | No.of Pages - 36",
       cover: "../books/book9.png",
       insideImages: [
         "../books/book9.1.png",
@@ -158,12 +158,12 @@ const BookGallery = () => {
         "../books/book9.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Colouring Concepts 🔹 Instructions 🔹 34 Activites 🔹 Self-assessment Activity",
     },
     {
       id: 10,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "MANDALA for Balancing Hands",
+      price: "₹. 79.00 | No.of Pages - 32",
       cover: "../books/book10.png",
       insideImages: [
         "../books/book10.1.png",
@@ -172,12 +172,12 @@ const BookGallery = () => {
         "../books/book10.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Motor Skill improvement and Colouring Concepts 🔹 Instructions 🔹 Easy, Medium and Hard levels 🔹 30 Activites 🔹 self-assessment Activity",
     },
     {
       id: 11,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "HIDDEN WORDS",
+      price: "₹. 79.00 | No.of Pages - 28",
       cover: "../books/book11.png",
       insideImages: [
         "../books/book11.1.png",
@@ -186,12 +186,12 @@ const BookGallery = () => {
         "../books/book11.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Words search Concepts 🔹 Instructions 🔹 Answers 🔹 26 Activites 🔹 self-assessment Activity",
     },
     {
       id: 12,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "TRACE THE PATTERNS",
+      price: "₹. 79.00 | No.of Pages - 28",
       cover: "../books/book12.png",
       insideImages: [
         "../books/book12.1.png",
@@ -199,13 +199,12 @@ const BookGallery = () => {
         "../books/book12.3.png",
         "../books/book12.4.png",
       ],
-      description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+      description: "Handwriting improvement Concepts 🔹 50+ Activites",
     },
     {
       id: 13,
-      title: "Inspiring Personalities",
-      price: "Dr. Pushpalatha G S",
+      title: "CONSTRUCT WORDS",
+      price: "₹. 79.00 | No.of Pages - 32",
       cover: "../books/book13.png",
       insideImages: [
         "../books/book13.1.png",
@@ -214,7 +213,7 @@ const BookGallery = () => {
         "../books/book13.4.png",
       ],
       description:
-        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+        "Word Formation Concepts 🔹 Instructions 🔹 Answers 🔹 30 Activites 🔹 sel-assessment Activity",
     },
   ];
 
@@ -335,19 +334,16 @@ const BookGallery = () => {
                 icon: BookOpen,
                 title: "Total Books",
                 value: books.length,
-                color: "blue",
               },
               {
                 icon: User,
                 title: "Author",
                 value: "Dr. Pushpalatha G S",
-                color: "green",
               },
               {
                 icon: Mail,
                 title: "Contact",
                 value: "perumabooks@gmail.com",
-                color: "purple",
               },
             ].map((stat, index) => (
               <div
@@ -358,13 +354,13 @@ const BookGallery = () => {
                 }}
               >
                 <div className="flex items-center space-x-4">
-                  <stat.icon className={`w-8 h-8 text-${stat.color}-600`} />
+                  <stat.icon className={`w-8 h-8 text-blue-600`} />
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
                       {stat.title}
                     </h3>
                     <p
-                      className={`text-lg sm:text-xl font-medium text-${stat.color}-600`}
+                      className={`text-lg sm:text-xl font-medium text-blue-600`}
                     >
                       {stat.value}
                     </p>
@@ -388,7 +384,7 @@ const BookGallery = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               About Our Books
             </h2>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed font-serif">
               Our educational books are carefully crafted to provide
               comprehensive learning experiences across various subjects. From
               coding to mathematics, and from inspiring stories to practical
@@ -415,7 +411,7 @@ const BookGallery = () => {
                   <h2 className="text-3xl font-bold text-gray-800">
                     {selectedBook.title}
                   </h2>
-                  <p className="text-xl text-gray-600 mt-1">
+                  <p className="text-xl text-orange-600 mt-1">
                     {selectedBook.price}
                   </p>
                 </div>

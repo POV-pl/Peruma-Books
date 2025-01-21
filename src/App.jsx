@@ -6,6 +6,7 @@ import Logo from "./assests/PRM_Logo-removebg-preview.png";
 import Logo2 from "./assests/full-logo-peruma.png";
 import BookGallery from "./Books";
 import WorkshopGallery from "./workshops";
+import { Link } from "react-scroll";
 
 const App = () => {
   return (
@@ -53,13 +54,17 @@ const App = () => {
                 </div>
 
                 <div className="flex justify-center lg:justify-start pt-4">
-                  <button
+                  <Link
+                    to={"books"}
+                    smooth
+                    duration={500}
+                    offset={-80}
                     className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-lg font-medium 
                     shadow-lg transition-all duration-300 animate-button
-                    hover:shadow-xl hover:-translate-y-1"
+                    hover:shadow-xl hover:-translate-y-1 hover:cursor-pointer"
                   >
                     Explore Our Collection
-                  </button>
+                  </Link>
                 </div>
               </div>
 
