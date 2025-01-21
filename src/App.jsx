@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Logo from "./assests/PRM_Logo-removebg-preview.png";
 import Logo2 from "./assests/full-logo-peruma.png";
 import BookGallery from "./Books";
+import WorkshopGallery from "./workshops";
 
 const App = () => {
   return (
@@ -113,7 +114,9 @@ const App = () => {
       <section id="books" className="px-4">
         <BookGallery />
       </section>
-
+      <section id="workshops" className="px-4">
+        <WorkshopGallery />
+      </section>
       <style jsx global>{`
         @keyframes float {
           0%,
