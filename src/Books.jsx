@@ -36,32 +36,183 @@ const BookGallery = () => {
   const books = [
     {
       id: 1,
-      title: "Binary Coding Activities",
-      author: "Dr. Pushpalatha G S",
+      title: "BINARY COADING ACTIVITES",
+      price: "₹. 399.00 | No.of Pages - 48",
       cover: "../books/book1.png",
       insideImages: [
         "../books/book1.1.png",
         "../books/book1.2.png",
         "../books/book1.3.png",
+        "../books/book1.4.png",
       ],
       description:
-        "Binary Coding Activities is an engaging and comprehensive book designed to introduce readers to the fascinating world of binary coding. Perfect for beginners, educators, and enthusiasts, this book combines foundational concepts with interactive learning to make coding fun and accessible.",
+        "Coading concepts 🔹 Instructions 🔹 Quiz 🔹 Answers 🔹 120 Activites 🔹 Illustrations 🔹 Self-assessment Activity",
     },
     {
       id: 2,
       title: "GRAPHS",
-      author: "Dr. Pushpalatha G S",
+      price: "₹. 199.00 | No.of Pages - 36",
       cover: "../books/book2.png",
-      insideImages: ["../books/book2.1.png", "../books/book2.2.png"],
+      insideImages: [
+        "../books/book2.1.png",
+        "../books/book2.2.png",
+        "../books/book2.3.png",
+        "../books/book2.4.png",
+      ],
       description:
-        "Mastering Graphs is an educational book crafted to help learners understand and apply graphing concepts effectively. With a structured approach, this book simplifies the subject, making it ideal for students and educators alike.",
+        "Concepts of graphs🔹 Instructions 🔹 Quiz 🔹 Answers 🔹 16 Activites 🔹 Illustrations 🔹 4 types of graphs",
     },
     {
       id: 3,
-      title: "Inspiring Personalities",
-      author: "Dr. Pushpalatha G S",
+      title: "INSPIRING PERSONALITES",
+      price: "₹. 199.00 | No.of Pages - 72",
       cover: "../books/book3.png",
-      insideImages: ["../books/book3.1.png", "../books/book3.2.png"],
+      insideImages: [
+        "../books/book3.1.png",
+        "../books/book3.2.png",
+        "../books/book3.3.png",
+        "../books/book3.4.png",
+      ],
+      description:
+        "Covers 30 Personalites 🔹 Highlights eduction, field of work, lifestyle, achievements, and legacy 🔹 Quiz 🔹 Answers",
+    },
+    {
+      id: 4,
+      title: "NUMBERS",
+      price: "₹. 99.00 | No.of Pages - 32",
+      cover: "../books/book4.png",
+      insideImages: [
+        "../books/book4.1.png",
+        "../books/book4.2.png",
+        "../books/book4.3.png",
+        "../books/book4.4.png",
+      ],
+      description:
+        "Number Concepts 🔹 Instructions 🔹 Answers 🔹 13 Activites 🔹 Illustrations",
+    },
+    {
+      id: 5,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book5.png",
+      insideImages: [
+        "../books/book5.1.png",
+        "../books/book5.2.png",
+        "../books/book5.3.png",
+        "../books/book5.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 6,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book6.png",
+      insideImages: [
+        "../books/book6.1.png",
+        "../books/book6.2.png",
+        "../books/book6.3.png",
+        "../books/book6.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 7,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book7.png",
+      insideImages: [
+        "../books/book7.1.png",
+        "../books/book7.2.png",
+        "../books/book7.3.png",
+        "../books/book7.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 8,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book8.png",
+      insideImages: [
+        "../books/book8.1.png",
+        "../books/book8.2.png",
+        "../books/book8.3.png",
+        "../books/book8.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 9,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book9.png",
+      insideImages: [
+        "../books/book9.1.png",
+        "../books/book9.2.png",
+        "../books/book9.3.png",
+        "../books/book9.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 10,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book10.png",
+      insideImages: [
+        "../books/book10.1.png",
+        "../books/book10.2.png",
+        "../books/book10.3.png",
+        "../books/book10.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 11,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book11.png",
+      insideImages: [
+        "../books/book11.1.png",
+        "../books/book11.2.png",
+        "../books/book11.3.png",
+        "../books/book11.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 12,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book12.png",
+      insideImages: [
+        "../books/book12.1.png",
+        "../books/book12.2.png",
+        "../books/book12.3.png",
+        "../books/book12.4.png",
+      ],
+      description:
+        "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
+    },
+    {
+      id: 13,
+      title: "Inspiring Personalities",
+      price: "Dr. Pushpalatha G S",
+      cover: "../books/book13.png",
+      insideImages: [
+        "../books/book13.1.png",
+        "../books/book13.2.png",
+        "../books/book13.3.png",
+        "../books/book13.4.png",
+      ],
       description:
         "Inspiring Personalities is a captivating collection of stories about remarkable individuals who have made a lasting impact on the world. This book is designed to ignite curiosity, instill values, and motivate readers to pursue their dreams with determination.",
     },
@@ -148,7 +299,9 @@ const BookGallery = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-end justify-center p-4">
                       <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         <h3 className="font-semibold text-lg">{book.title}</h3>
-                        <p className="text-sm opacity-80">{book.author}</p>
+                        <p className="text-blue-200 text-sm opacity-80">
+                          {book.price}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -263,7 +416,7 @@ const BookGallery = () => {
                     {selectedBook.title}
                   </h2>
                   <p className="text-xl text-gray-600 mt-1">
-                    {selectedBook.author}
+                    {selectedBook.price}
                   </p>
                 </div>
                 <button
