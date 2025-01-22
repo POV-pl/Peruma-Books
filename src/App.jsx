@@ -6,11 +6,12 @@ import Logo from "./assests/PRM_Logo-removebg-preview.png";
 import Logo2 from "./assests/full-logo-peruma.png";
 import BookGallery from "./Books";
 import WorkshopGallery from "./workshops";
+import CollaborationForm from "./collaborate";
 import { Link } from "react-scroll";
 
 const App = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col ">
       <Header />
 
       {/* Main background with subtle gradient */}
@@ -121,6 +122,9 @@ const App = () => {
       </section>
       <section id="workshops" className="px-4">
         <WorkshopGallery />
+      </section>
+      <section id="collaborate" className="px-4">
+        <CollaborationForm />
       </section>
       <style jsx global>{`
         @keyframes float {

@@ -342,16 +342,16 @@ const BookGallery = () => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
+              className="bg-white rounded-xl overflow-auto  shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="bg-blue-100 p-3 rounded-lg">
-                <stat.icon className="w-6 h-6 text-blue-600" />
+                <stat.icon className="w-6 h-6 text-blue-600 sm:text-sm md:text-sm lg:text-lg" />
               </div>
               <div>
-                <p className="text-sm text-blue-600 font-medium">
+                <p className=" text-blue-600 font-medium sm:text-sm md:text-lg lg:text-lg">
                   {stat.title}
                 </p>
-                <p className="text-lg font-semibold text-blue-900">
+                <p className=" font-semibold text-blue-1000  sm:text-sm md:text-sm lg:text-lg">
                   {stat.value}
                 </p>
               </div>
@@ -374,7 +374,7 @@ const BookGallery = () => {
             </div>
           </div>
           <div className="text-center mt-4">
-            <p className="text-blue-600">
+            <p className="text-blue-1000">
               Explore our handpicked selection of educational materials
             </p>
           </div>
@@ -382,12 +382,12 @@ const BookGallery = () => {
 
         {/* Book Grid */}
 
-        <div className="flex justify-center items-center min-h-screen">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center content-center justify-center w-fit mx-auto">
             {books.map((book) => (
               <div
                 key={book.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-blue-900"
+                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-blue-900 w-full max-w-sm"
                 onClick={() => {
                   setSelectedBook(book);
                   setCurrentImageIndex(0);
@@ -412,7 +412,7 @@ const BookGallery = () => {
                     </div>
                     <button
                       onClick={(e) => handleShowInterest(e, book.title)}
-                      className="mt-4 w-full bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition-colors flex items-center justify-center gap-2"
+                      className="mt-4 w-full bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2"
                     >
                       <Send className="w-4 h-4" />
                       Show Interest
