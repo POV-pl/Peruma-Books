@@ -315,7 +315,7 @@ const BookGallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b">
       {showInterestMessage && (
         <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
           Interest Noted!.
@@ -383,7 +383,7 @@ const BookGallery = () => {
         {/* Book Grid */}
 
         <div className="min-h-screen flex items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center content-center justify-center w-fit mx-auto">
+          <div className="min-h-screen flex flex-row gap-6 flex-wrap bg-gradient-to-b justify-around">
             {books.map((book) => (
               <div
                 key={book.id}

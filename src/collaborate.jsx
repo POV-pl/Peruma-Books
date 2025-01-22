@@ -52,8 +52,8 @@ const CollaborationForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-orange-50 py-12 px-4 sm:px-6 lg:px-8 relative">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br py-12 px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
         {/* Header Section */}
         <div className="bg-blue-600 px-6 py-8 text-white">
           <h2 className="text-3xl font-bold text-center">Let's Collaborate</h2>
