@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 
 const Gallery = () => {
   const images = [
@@ -12,70 +13,107 @@ const Gallery = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [popupImage, setPopupImage] = useState(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(slideInterval);
+  const nextImage = useCallback(() => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
   }, [images.length]);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  }, [images.length]);
 
-  const openPopup = (image) => {
-    setPopupImage(image);
-  };
+  useEffect(() => {
+    const slideInterval = setInterval(nextImage, 5000);
+    return () => clearInterval(slideInterval);
+  }, [nextImage]);
 
-  const closePopup = () => {
-    setPopupImage(null);
+  const toggleFullscreen = () => {
+    setIsFullscreen(!isFullscreen);
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
-      <main className="flex-1">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center mb-8 w-full relative">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
-              Gallery
-            </h1>
-            <p className="text-gray-600">
-              Capturing Moments, Sharing Experiences
-            </p>
-          </div>
+    <div className="md:min-h-fit bg-gradient-to-br from-indigo-900 via-black to-blue-900 flex items-center justify-center sm:min-h-fit lg:p-4 md:p-4 sm:py-2 relative">
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+          {/* Sidebar Thumbnails */}
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="hidden md:block md:col-span-2 space-y-4"
+          >
+            {images.map((img, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`cursor-pointer border-4 rounded-lg overflow-hidden transition-all duration-300 ${
+                  index === currentImageIndex
+                    ? "border-blue-500 shadow-2xl"
+                    : "border-gray-700 opacity-50"
+                }`}
+                onClick={() => setCurrentImageIndex(index)}
+              >
+                <img
+                  src={img}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="w-full h-24 object-cover"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
 
-          <div className="relative w-full max-w-4xl mx-auto">
-            <div className="relative overflow-hidden rounded-lg shadow-lg">
-              <img
-                src={images[currentImageIndex]}
-                alt={`Gallery image ${currentImageIndex + 1}`}
-                className="w-full h-[500px] object-cover cursor-pointer"
-                onClick={() => openPopup(images[currentImageIndex])}
-              />
+          {/* Main Gallery Area */}
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            className="relative md:col-span-10 bg-black/30 rounded-2xl p-4 shadow-2xl"
+          >
+            <div className="relative overflow-hidden rounded-xl">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentImageIndex}
+                  src={images[currentImageIndex]}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full h-[500px] md:h-[700px] object-cover rounded-xl"
+                  onClick={() => setPopupImage(images[currentImageIndex])}
+                />
+              </AnimatePresence>
 
-              <button
+              {/* Navigation Buttons */}
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 onClick={prevImage}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-blue-500/50 hover:bg-blue-500/70 text-white p-3 rounded-full"
               >
-                <ChevronLeft />
-              </button>
-              <button
-                onClick={nextImage}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
-              >
-                <ChevronRight />
-              </button>
+                <ChevronLeft size={24} />
+              </motion.button>
 
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-orange-500/50 hover:bg-orange-500/70 text-white p-3 rounded-full"
+              >
+                <ChevronRight size={24} />
+              </motion.button>
+
+              {/* Indicator Dots */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
                 {images.map((_, index) => (
-                  <div
+                  <motion.div
                     key={index}
+                    initial={{ scale: 1 }}
+                    animate={{
+                      scale: index === currentImageIndex ? 1.5 : 1,
+                      opacity: index === currentImageIndex ? 1 : 0.5,
+                    }}
                     className={`h-2 w-2 rounded-full ${
                       index === currentImageIndex ? "bg-white" : "bg-white/50"
                     }`}
@@ -83,30 +121,56 @@ const Gallery = () => {
                 ))}
               </div>
             </div>
-
-            {popupImage && (
-              <div
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-                onClick={closePopup}
-              >
-                <div className="relative max-w-full max-h-full">
-                  <img
-                    src={popupImage}
-                    alt="Popup"
-                    className="max-w-full max-h-[90vh] object-contain"
-                  />
-                  <button
-                    onClick={closePopup}
-                    className="absolute top-2 right-2 bg-white/20 text-white p-2 rounded-full"
-                  >
-                    <X />
-                  </button>
-                </div>
-              </div>
-            )}
-          </div>
+          </motion.div>
         </div>
-      </main>
+      </div>
+
+      {/* Popup Modal */}
+      <AnimatePresence>
+        {popupImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+            onClick={() => setPopupImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{
+                scale: isFullscreen ? 1 : 0.9,
+                opacity: 1,
+              }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative max-w-full max-h-full"
+            >
+              <img
+                src={popupImage}
+                alt="Fullscreen view"
+                className="max-w-full max-h-[90vh] object-contain rounded-xl"
+              />
+              <div className="absolute top-4 right-4 flex space-x-4">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={toggleFullscreen}
+                  className="bg-white/20 hover:bg-white/40 text-white p-2 rounded-full"
+                >
+                  <Maximize2 />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => setPopupImage(null)}
+                  className="bg-white/20 hover:bg-white/40 text-white p-2 rounded-full"
+                >
+                  <X />
+                </motion.button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
