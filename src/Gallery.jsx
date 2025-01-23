@@ -33,7 +33,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="md:min-h-fit bg-gradient-to-br from-indigo-900 via-black to-blue-900 flex items-center justify-center sm:min-h-fit lg:p-4 md:p-4 sm:py-2 relative">
+    <div className="md:min-h-fit bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-16 mt-8 relative">
       <div className="w-full max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
           {/* Sidebar Thumbnails */}
@@ -50,8 +50,8 @@ const Gallery = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`cursor-pointer border-4 rounded-lg overflow-hidden transition-all duration-300 ${
                   index === currentImageIndex
-                    ? "border-blue-500 shadow-2xl"
-                    : "border-gray-700 opacity-50"
+                    ? "border-black-500 shadow-2xl"
+                    : "border-black-700 opacity-50"
                 }`}
                 onClick={() => setCurrentImageIndex(index)}
               >
