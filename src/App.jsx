@@ -7,8 +7,8 @@ import Logo2 from "./assests/full-logo-peruma.png";
 import BookGallery from "./Books";
 import WorkshopGallery from "./workshops";
 import CollaborationForm from "./collaborate";
+import Gallery from "./Gallery";
 import { Link } from "react-scroll";
-import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
@@ -124,9 +124,13 @@ const App = () => {
       <section id="workshops" className="px-4">
         <WorkshopGallery />
       </section>
+      <section id="gallery" className="px-4">
+        <Gallery />
+      </section>
       <section id="collaborate" className="px-4">
         <CollaborationForm />
       </section>
+
       <style jsx global>{`
         @keyframes float {
           0%,
@@ -191,7 +195,9 @@ const App = () => {
           animation: fadeSlideUp 0.6s ease-out forwards;
         }
       `}</style>
-      <Footer />
+      <section id="contact">
+        <Footer />
+      </section>
     </div>
   );
 };

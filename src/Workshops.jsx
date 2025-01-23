@@ -1,3 +1,4 @@
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import {
   ChevronLeft,
@@ -11,6 +12,7 @@ import {
 } from "lucide-react";
 
 const WorkshopGallery = () => {
+  const [showContactDetails, setShowContactDetails] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [selectedWorkshop, setSelectedWorkshop] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -30,7 +32,8 @@ const WorkshopGallery = () => {
       id: 1,
       title: "Prajñā",
       cover: "../workshop/wok1.png",
-      description: "Includes 6 innovative activities: Hidden words, Construct words, Inspiring Personalities, Wisdom in words, Trace the patterns, Mandala art",
+      description:
+        "Includes 6 innovative activities: Hidden words, Construct words, Inspiring Personalities, Wisdom in words, Trace the patterns, Mandala art",
       workshops: [
         {
           id: 1,
@@ -48,7 +51,7 @@ const WorkshopGallery = () => {
           capacity: 30,
           duration: "3 days",
           location: "Tech Hub, Downtown",
-          price: "$99"
+          price: "$99",
         },
         {
           id: 1,
@@ -66,15 +69,16 @@ const WorkshopGallery = () => {
           capacity: 30,
           duration: "3 days",
           location: "Tech Hub, Downtown",
-          price: "$99"
-        },// Other workshops (unchanged)
-      ]
+          price: "$99",
+        }, // Other workshops (unchanged)
+      ],
     },
     {
       id: 2,
       title: "Prameya",
       cover: "../workshop/package1-cover.png",
-      description: "Includes 6 innovative activities: Sudoku, Numbers, Math Puzzles, Graphs, Cryptic Messages, BCA",
+      description:
+        "Includes 6 innovative activities: Sudoku, Numbers, Math Puzzles, Graphs, Cryptic Messages, BCA",
       workshops: [
         {
           id: 1,
@@ -92,10 +96,10 @@ const WorkshopGallery = () => {
           capacity: 30,
           duration: "3 days",
           location: "Tech Hub, Downtown",
-          price: "$99"
+          price: "$99",
         },
-      ]
-    }
+      ],
+    },
   ];
 
   const nextImage = () => {
@@ -120,18 +124,19 @@ const WorkshopGallery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-8 w-full relative">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
-              Workshop Packages
+              Workshop
             </h1>
             <p className="text-gray-600">
-              Explore comprehensive learning experiences tailored to your interests
+              Explore comprehensive learning experiences tailored to your
+              interests
             </p>
           </div>
 
           {/* Grid Layout for Workshop Packages */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {workshopPackages.map((workshopPackage, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
                 onClick={() => {
                   setSelectedPackage(workshopPackage);
@@ -246,44 +251,49 @@ const WorkshopGallery = () => {
                 <div className="flex flex-col md:flex-row gap-6">
                   {/* Image Gallery Section */}
                   <div className="w-full md:w-2/3 relative">
-                    {selectedWorkshop.images && selectedWorkshop.images.length > 0 && (
-                      <div className="relative">
-                        <img
-                          src={selectedWorkshop.images[currentImageIndex]}
-                          alt={`${selectedWorkshop.title} image ${currentImageIndex + 1}`}
-                          className="w-full h-96 object-cover rounded-lg"
-                        />
-                        {selectedWorkshop.images.length > 1 && (
-                          <>
-                            <button
-                              onClick={prevImage}
-                              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/75 p-2 rounded-full transition"
-                            >
-                              <ChevronLeft className="w-6 h-6" />
-                            </button>
-                            <button
-                              onClick={nextImage}
-                              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/75 p-2 rounded-full transition"
-                            >
-                              <ChevronRight className="w-6 h-6" />
-                            </button>
-                          </>
-                        )}
-                        {selectedWorkshop.images.length > 1 && (
-                          <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
-                            {selectedWorkshop.images.map((_, index) => (
+                    {selectedWorkshop.images &&
+                      selectedWorkshop.images.length > 0 && (
+                        <div className="relative">
+                          <img
+                            src={selectedWorkshop.images[currentImageIndex]}
+                            alt={`${selectedWorkshop.title} image ${
+                              currentImageIndex + 1
+                            }`}
+                            className="w-full h-96 object-cover rounded-lg"
+                          />
+                          {selectedWorkshop.images.length > 1 && (
+                            <>
                               <button
-                                key={index}
-                                onClick={() => setCurrentImageIndex(index)}
-                                className={`w-2 h-2 rounded-full ${
-                                  index === currentImageIndex ? 'bg-blue-600' : 'bg-gray-300'
-                                }`}
-                              />
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    )}
+                                onClick={prevImage}
+                                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/75 p-2 rounded-full transition"
+                              >
+                                <ChevronLeft className="w-6 h-6" />
+                              </button>
+                              <button
+                                onClick={nextImage}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white/75 p-2 rounded-full transition"
+                              >
+                                <ChevronRight className="w-6 h-6" />
+                              </button>
+                            </>
+                          )}
+                          {selectedWorkshop.images.length > 1 && (
+                            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                              {selectedWorkshop.images.map((_, index) => (
+                                <button
+                                  key={index}
+                                  onClick={() => setCurrentImageIndex(index)}
+                                  className={`w-2 h-2 rounded-full ${
+                                    index === currentImageIndex
+                                      ? "bg-blue-600"
+                                      : "bg-gray-300"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
                   </div>
 
                   {/* Workshop Details Section */}
@@ -292,7 +302,9 @@ const WorkshopGallery = () => {
                       <h2 className="text-2xl font-bold text-gray-800 mb-2">
                         {selectedWorkshop.title}
                       </h2>
-                      <p className="text-gray-600">{selectedWorkshop.description}</p>
+                      <p className="text-gray-600">
+                        {selectedWorkshop.description}
+                      </p>
                     </div>
 
                     <div className="space-y-3">
@@ -314,7 +326,9 @@ const WorkshopGallery = () => {
                       </div>
                       <div className="flex items-center gap-3">
                         <Users className="w-5 h-5 text-blue-600" />
-                        <span>Capacity: {selectedWorkshop.capacity} participants</span>
+                        <span>
+                          Capacity: {selectedWorkshop.capacity} participants
+                        </span>
                       </div>
                     </div>
 
@@ -322,9 +336,6 @@ const WorkshopGallery = () => {
                       <span className="text-2xl font-bold text-blue-600">
                         {selectedWorkshop.price}
                       </span>
-                      <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                        Register Now
-                      </button>
                     </div>
                   </div>
                 </div>

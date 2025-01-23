@@ -10,6 +10,7 @@ import {
   orderBy,
   setDoc,
 } from "firebase/firestore";
+import { text } from "framer-motion/client";
 
 export default function OwnerDataReader() {
   const [data, setData] = useState([]);
@@ -109,8 +110,8 @@ export default function OwnerDataReader() {
           <form onSubmit={handleAuth} className="space-y-4">
             <input
               type="password"
-              value={authKey}
               onChange={(e) => setAuthKey(e.target.value)}
+              value={authKey}
               placeholder="Enter access key"
               className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
