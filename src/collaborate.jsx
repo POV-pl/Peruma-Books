@@ -4,6 +4,7 @@ import { db } from "./firebaseConfig";
 
 const CollaborationForm = () => {
   const [formData, setFormData] = useState({
+    name: "",
     institutionType: "",
     institutionName: "",
     email: "",
@@ -36,6 +37,7 @@ const CollaborationForm = () => {
       });
       setSuccess(true);
       setFormData({
+        nmae: "",
         institutionType: "",
         institutionName: "",
         email: "",
@@ -99,7 +101,7 @@ const CollaborationForm = () => {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                   Institution Type <span className="text-orange-500">*</span>
@@ -112,9 +114,9 @@ const CollaborationForm = () => {
                   required
                 >
                   <option value="">Select Type</option>
-                  <option value="publisher">Publisher</option>
-                  <option value="school">School</option>
-                  <option value="ngo">NGO</option>
+                  <option value="School">School</option>
+                  <option value="NGO">NGO</option>
+                  <option value="Distributor">Distributor</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -127,6 +129,19 @@ const CollaborationForm = () => {
                   type="text"
                   name="institutionName"
                   value={formData.institutionName}
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                  required
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="block text-sm font-medium text-gray-700">
+                  Name <span className="text-orange-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
                   required

@@ -8,6 +8,7 @@ import BookGallery from "./Books";
 import WorkshopGallery from "./workshops";
 import CollaborationForm from "./collaborate";
 import { Link } from "react-scroll";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (

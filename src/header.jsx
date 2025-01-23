@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link as RouterLink } from "react-router-dom";
 import Logo from "./assests/PRM_Logo-removebg-preview.png";
 
 const Header = () => {
@@ -22,7 +23,9 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={Logo} alt="PRM Logo" className="h-14 w-auto" />
+            <RouterLink to="/owner-data">
+              <img src={Logo} alt="PRM Logo" className="h-14 w-auto" />
+            </RouterLink>
           </div>
 
           {/* Desktop Navigation */}
