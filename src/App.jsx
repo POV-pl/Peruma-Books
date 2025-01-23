@@ -47,7 +47,7 @@ const App = () => {
                     </span>
                   </h1>
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 animate-content">
-                    Educational Books
+                    Innovative Activity Books
                   </h2>
                   <p className="text-lg md:text-xl text-gray-600 animate-content-delayed">
                     Transform Learning Through Activity
