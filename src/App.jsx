@@ -5,7 +5,7 @@ import Footer from "./footer";
 import Logo from "./assests/PRM_Logo-removebg-preview.png";
 import Logo2 from "./assests/full-logo-peruma.png";
 import BookGallery from "./Books";
-import WorkshopGallery from "./workshops";
+import WorkshopGallery from "./Workshops";
 import CollaborationForm from "./collaborate";
 import Gallery from "./Gallery";
 import { Link } from "react-scroll";
