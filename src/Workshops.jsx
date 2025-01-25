@@ -1,4 +1,3 @@
-import { Mail, Phone, MessageCircle } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import {
   ChevronLeft,
@@ -9,6 +8,8 @@ import {
   Clock,
   MapPin,
   Folder,
+  ShoppingCart,
+  Tag,
 } from "lucide-react";
 
 const WorkshopGallery = () => {
@@ -34,7 +35,8 @@ const WorkshopGallery = () => {
       cover: "../workshop/wok9.png",
       description:
         "Includes 6 innovative activities: Hidden words, Construct words, Inspiring Personalities, Wisdom in words, Trace the patterns, Mandala art",
-      price: "Discount Price: Rs.449/-",
+      originalPrice: "Rs. 614/-",
+      discountPrice: "Rs. 449/-",
       workshops: [
         {
           id: 1,
@@ -121,7 +123,8 @@ const WorkshopGallery = () => {
       cover: "../workshop/wok2.png",
       description:
         "Includes 6 innovative activities: Sudoku, Numbers, Math Puzzles, Graphs, Cryptic Messages, BCA",
-      price: "Discount Price: Rs. 699/- only",
+      originalPrice: "Rs. 974/-",
+      discountPrice: "Rs. 699/-",
       workshops: [
         {
           id: 1,
@@ -222,24 +225,23 @@ const WorkshopGallery = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 relative">
       <main className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-8 w-full relative">
             <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
-              Workshop
+              Cognitive Development Workshops
             </h1>
             <p className="text-gray-600">
-              Explore comprehensive learning experiences tailored to your
-              interests
+              Unlock Your Potential with Comprehensive Learning Experiences
             </p>
           </div>
 
           {/* Grid Layout for Workshop Packages */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-            {workshopPackages.map((workshopPackage, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {workshopPackages.map((workshopPackage) => (
               <div
-                key={index}
+                key={workshopPackage.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
                 onClick={() => {
                   setSelectedPackage(workshopPackage);
@@ -261,18 +263,27 @@ const WorkshopGallery = () => {
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {workshopPackage.description}
                   </p>
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                     <div className="flex items-center gap-2 text-gray-600">
                       <Folder className="w-5 h-5" />
                       <span className="text-sm">
                         {workshopPackage.workshops.length} Workshops
                       </span>
                     </div>
-                    <div className="flex items-center gap-4">
-                      <span className="text-blue-600 font-bold">
-                        {workshopPackage.price}
-                      </span>
-                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                      <div className="flex items-center gap-2">
+                        <Tag className="w-5 h-5 text-red-500" />
+                        <div>
+                          <span className="text-gray-500 line-through text-sm mr-2">
+                            {workshopPackage.originalPrice}
+                          </span>
+                          <span className="text-blue-600 font-bold">
+                            {workshopPackage.discountPrice}
+                          </span>
+                        </div>
+                      </div>
+                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                        <ShoppingCart className="w-5 h-5" />
                         View Package
                       </button>
                     </div>
@@ -450,6 +461,42 @@ const WorkshopGallery = () => {
               </div>
             </div>
           )}
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-4 bg-white shadow-lg rounded-xl relative">
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
+            Workshop Package Comparison
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {workshopPackages.map((pkg) => (
+              <div key={pkg.id} className="bg-gray-50 p-6 rounded-xl">
+                <h3 className="text-xl font-semibold mb-4 text-blue-600">
+                  {pkg.title} Package
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span>Original Price</span>
+                    <span className="text-gray-500 line-through">
+                      {pkg.originalPrice}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center font-bold">
+                    <span>Discounted Price</span>
+                    <span className="text-blue-600">{pkg.discountPrice}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Number of Workshops</span>
+                    <span>{pkg.workshops.length}</span>
+                  </div>
+                  <div className="pt-4">
+                    <button className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                      <ShoppingCart className="w-5 h-5" />
+                      Purchase Package
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
     </div>
