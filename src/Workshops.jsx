@@ -31,72 +31,175 @@ const WorkshopGallery = () => {
     {
       id: 1,
       title: "Prajñā",
-      cover: "../workshop/wok1.png",
+      cover: "../workshop/wok9.png",
       description:
         "Includes 6 innovative activities: Hidden words, Construct words, Inspiring Personalities, Wisdom in words, Trace the patterns, Mandala art",
+      price: "Discount Price: Rs.449/-",
       workshops: [
         {
           id: 1,
-          title: "Binary Coding Activities",
+          title: "Hidden Words",
           instructor: "Dr. Pushpalatha G S",
-          cover: "../workshop/wok1.png",
-          images: [
-            "../workshop/wok1.png",
-            "../workshop/wok1.png",
-            "../workshops/web-dev-3.png",
-          ],
+          cover: "../workshop/wok9.png",
+          images: ["../workshop/wok9.png"],
           description:
-            "Intensive workshop exploring binary coding and computational thinking through interactive activities.",
-          date: "March 15-17, 2025",
+            "Intensive workshop exploring Hidden Words through interactive activities.",
+          date: "Upcoming",
           capacity: 30,
           duration: "3 days",
           location: "Tech Hub, Downtown",
-          price: "$99",
         },
         {
-          id: 1,
-          title: "Binary Coding Activities",
+          id: 2,
+          title: "Construct words",
           instructor: "Dr. Pushpalatha G S",
-          cover: "../workshop/wok1.png",
-          images: [
-            "../workshop/wok1.png",
-            "../workshop/wok1.png",
-            "../workshops/web-dev-3.png",
-          ],
+          cover: "../workshop/wok8.png",
+          images: ["../workshop/wok8.png"],
           description:
-            "Intensive workshop exploring binary coding and computational thinking through interactive activities.",
-          date: "March 15-17, 2025",
+            "Intensive workshop on Construct Words helps to form new words through interactive activities.",
+          date: "Upcoming",
           capacity: 30,
           duration: "3 days",
           location: "Tech Hub, Downtown",
-          price: "$99",
+        },
+        {
+          id: 3,
+          title: "Inspiring Personalities",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok7.png",
+          images: ["../workshop/wok7.png"],
+          description:
+            "Intensive workshop on Inspiring Personalities teaches valuable life lessons.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 4,
+          title: "Wisdom in words",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok13.png",
+          images: ["../workshop/wok13.png"],
+          description:
+            "Intensive workshop on Wisdom in words, a collection of inspiring quotes.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 5,
+          title: "Trace the patterns",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok12.png",
+          images: ["../workshop/wok12.png"],
+          description:
+            "Intensive workshop on Trace the patterns, improves Handwriting.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 6,
+          title: "Mandala art",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok10.png",
+          images: ["../workshop/wok10.png"],
+          description: "Intensive workshop on Mandala Art for Balancing hands.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
         }, // Other workshops (unchanged)
       ],
     },
     {
       id: 2,
       title: "Prameya",
-      cover: "../workshop/package1-cover.png",
+      cover: "../workshop/wok2.png",
       description:
         "Includes 6 innovative activities: Sudoku, Numbers, Math Puzzles, Graphs, Cryptic Messages, BCA",
+      price: "Discount Price: Rs. 699/- only",
       workshops: [
         {
           id: 1,
-          title: "Binary Coding Activities",
+          title: "Sudoku",
           instructor: "Dr. Pushpalatha G S",
-          cover: "../workshop/wok1.png",
-          images: [
-            "../workshop/wok1.png",
-            "../workshop/wok1.png",
-            "../workshops/web-dev-3.png",
-          ],
+          cover: "../workshop/wok2.png",
+          images: ["../workshop/wok2.png"],
           description:
-            "Intensive workshop exploring binary coding and computational thinking through interactive activities.",
-          date: "March 15-17, 2025",
+            "Intensive workshop exploring Sudoku, number game and problem solving concepts through interactive activities.",
+          date: "Upcoming",
           capacity: 30,
           duration: "3 days",
           location: "Tech Hub, Downtown",
-          price: "$99",
+        },
+        {
+          id: 2,
+          title: "Numbers",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok4.png",
+          images: ["../workshop/wok4.png"],
+          description:
+            "Intensive workshop exploring Numbers, from simple to complex concepts through interactive activities.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 3,
+          title: "Math Puzzles",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok3.png",
+          images: ["../workshop/wok3.png"],
+          description:
+            "Intensive workshop exploring Math puzzles,improves problem solving skills through interactive activities.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 4,
+          title: "Graphs",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok6.png",
+          images: ["../workshop/wok6.png"],
+          description:
+            "Intensive workshop exploring Grpahs,charting the self data through interactive activities.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 5,
+          title: "Cryptic Messages",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok5.png",
+          images: ["../workshop/wok5.png"],
+          description:
+            "Intensive workshop exploring Cryptic Messages,learn secret code concepts through interactive activities.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
+        },
+        {
+          id: 6,
+          title: "Binary Coding Activities",
+          instructor: "Dr. Pushpalatha G S",
+          cover: "../workshop/wok1.png",
+          images: ["../workshop/wok1.png"],
+          description:
+            "Intensive workshop exploring Binary Coding Activities,get better understanding of coding concepts through interactive activities.",
+          date: "Upcoming",
+          capacity: 30,
+          duration: "3 days",
+          location: "Tech Hub, Downtown",
         },
       ],
     },
@@ -165,9 +268,14 @@ const WorkshopGallery = () => {
                         {workshopPackage.workshops.length} Workshops
                       </span>
                     </div>
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                      View Package
-                    </button>
+                    <div className="flex items-center gap-4">
+                      <span className="text-blue-600 font-bold">
+                        {workshopPackage.price}
+                      </span>
+                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        View Package
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

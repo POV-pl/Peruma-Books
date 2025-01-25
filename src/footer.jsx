@@ -166,15 +166,15 @@ const Footer = () => {
                   <div className="flex items-center">
                     <FaEnvelope className="mr-2 text-blue-600" />
                     <a
-                      href="mailto:contact@peruma.com"
+                      href="mailto:perumabooks@gmail.com"
                       className="hover:text-blue-800 transition duration-300"
                     >
-                      contact@peruma.com
+                      perumabooks@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center">
                     <FaPhone className="mr-2 text-blue-600" />
-                    <span>+91 (080) 1234 5678</span>
+                    <span>+91 86183 31380</span>
                   </div>
                   <div className="mt-2 text-xs text-gray-500">
                     Support available: Mon-Sat, 9 AM - 6 PM
