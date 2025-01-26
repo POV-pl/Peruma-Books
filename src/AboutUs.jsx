@@ -154,10 +154,10 @@ const AboutUs = () => {
                         className: "text-blue-700 stroke-[1.5]",
                       })}
                     </div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">
+                    <h4 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-4 md:mb-6">
                       {benefits[currentIndex].title}
                     </h4>
-                    <p className="text-base md:text-xl text-gray-700 leading-relaxed font-medium">
+                    <p className="text-base md:text-xl text-gray-700 text-justify leading-relaxed font-medium">
                       {benefits[currentIndex].description}
                     </p>
                   </div>
