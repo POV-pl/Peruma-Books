@@ -14,5 +14,34 @@ export default {
       },
     },
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        'fredoka': ['Fredoka', 'sans-serif']
+      }
+    }
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        'quicksand': ['Quicksand', 'sans-serif']
+      }
+    }
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
+    },
+  },
+  theme: {
+    extend: {
+      fontFamily: {
+        'comic': ['Comic Neue', 'cursive']
+      },
+    },
+  },
+
   plugins: [],
 };
