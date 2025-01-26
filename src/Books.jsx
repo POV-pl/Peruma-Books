@@ -14,7 +14,7 @@ const BookGallery = () => {
   const [selectedBook, setSelectedBook] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showInterestMessage, setShowInterestMessage] = useState(false);
-
+  const [visibleBooks, setVisibleBooks] = useState(6);
   const books = [
     {
       id: 1,
@@ -314,6 +314,10 @@ const BookGallery = () => {
     }
   };
 
+  const handleSeeMore = () => {
+    setVisibleBooks(books.length);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b">
       {showInterestMessage && (
@@ -342,16 +346,16 @@ const BookGallery = () => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-auto  shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
+              className="bg-white rounded-xl overflow-auto shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="bg-blue-100 p-3 rounded-lg">
                 <stat.icon className="w-6 h-6 text-blue-600 sm:text-sm md:text-sm lg:text-lg" />
               </div>
               <div>
-                <p className=" text-blue-600 font-medium sm:text-sm md:text-lg lg:text-lg">
+                <p className="text-blue-600 font-medium sm:text-sm md:text-lg lg:text-lg">
                   {stat.title}
                 </p>
-                <p className=" font-semibold text-blue-1000  sm:text-sm md:text-sm lg:text-lg">
+                <p className="font-semibold text-blue-1000 sm:text-sm md:text-sm lg:text-lg">
                   {stat.value}
                 </p>
               </div>
@@ -381,10 +385,9 @@ const BookGallery = () => {
         </div>
 
         {/* Book Grid */}
-
         <div className="min-h-screen flex items-center justify-center">
           <div className="min-h-screen flex flex-row gap-6 flex-wrap bg-gradient-to-b justify-around">
-            {books.map((book) => (
+            {books.slice(0, visibleBooks).map((book) => (
               <div
                 key={book.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl border-2 border-blue-900 w-full max-w-sm"
@@ -423,6 +426,18 @@ const BookGallery = () => {
             ))}
           </div>
         </div>
+
+        {/* See More Button */}
+        {visibleBooks < books.length && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={handleSeeMore}
+              className="bg-blue-900 text-white py-3 px-6 rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              See More Books
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Modal */}
