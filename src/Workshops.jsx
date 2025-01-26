@@ -491,7 +491,7 @@ const WorkshopGallery = () => {
                     <span>{pkg.workshops.length}</span>
                   </div>
                   <div className="flex justify-center items-center gap-4 font-semibold">
-                    To pusrchase the package{" "}
+                    To purchase the package{" "}
                     <span className="text-blue-800">
                       <GoArrowDown />
                     </span>
