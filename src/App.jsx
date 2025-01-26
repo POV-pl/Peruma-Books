@@ -8,7 +8,7 @@ import BookGallery from "./Books";
 import WorkshopGallery from "./Workshops";
 import CollaborationForm from "./collaborate";
 import Gallery from "./Gallery";
-import { Link } from "react-scroll";
+import ImageCarousel from "./imagescrol";
 
 const App = () => {
   return (
@@ -26,66 +26,11 @@ const App = () => {
         />
       </div>
 
-      <main className="flex-1">
+      <main className="flex-1 lg:mt-16">
         <section className="relative pt-24 md:pt-16">
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-12 items-center">
-              {/* Content Side */}
-              <div className="text-center lg:text-left space-y-6">
-                {/* Logo for Mobile */}
-                <div className="flex justify-center lg:hidden animate-fade-in">
-                  <img
-                    src={Logo}
-                    alt="PERUMA Logo"
-                    className="h-28 w-auto object-contain"
-                  />
-                </div>
-
-                <div className="space-y-4 pt-4">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-title">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
-                      PERUMA
-                    </span>
-                  </h1>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 animate-content">
-                    Innovative Activity Books
-                  </h2>
-                  <p className="text-lg md:text-xl text-gray-600 animate-content-delayed">
-                    Transform Learning Through Activity
-                  </p>
-                </div>
-
-                <div className="flex justify-center lg:justify-start pt-4">
-                  <Link
-                    to={"books"}
-                    smooth
-                    duration={500}
-                    offset={-80}
-                    className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-lg font-medium 
-                    shadow-lg transition-all duration-300 animate-button
-                    hover:shadow-xl hover:-translate-y-1 hover:cursor-pointer"
-                  >
-                    Explore Our Collection
-                  </Link>
-                </div>
-              </div>
-
-              {/* Logo Side - Desktop Only */}
-              <div className="hidden lg:block relative">
-                <div className="relative w-full h-[400px] flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-blue-500/10 rounded-2xl blur-3xl transform rotate-6" />
-                  <img
-                    src={Logo}
-                    alt="PERUMA Logo"
-                    className="h-64 w-auto object-contain relative z-10 animate-float"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <ImageCarousel />
           {/* Statistics Section */}
-          <div className="relative z-10 bg-blue-900 text-white py-12 mt-16">
+          <div className="relative z-10 bg-blue-900 text-white py-12 ">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 {[
@@ -113,11 +58,10 @@ const App = () => {
             </div>
           </div>
         </section>
-
-        <section id="about-us" className="px-4">
-          <AboutUs />
-        </section>
       </main>
+      <section id="about-us" className="px-4">
+        <AboutUs />
+      </section>
       <section id="books" className="px-4">
         <BookGallery />
       </section>

@@ -89,7 +89,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
+          <div className="md:hidden absolute top-full left-0 w-full  bg-white shadow-lg ">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item, index) => (
                 <Link
