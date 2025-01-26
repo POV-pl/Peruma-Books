@@ -1,19 +1,18 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */ 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       keyframes: {
-        modalEntry: {
-          "0%": { transform: "scale(0.9)", opacity: 0 },
-          "100%": { transform: "scale(1)", opacity: 1 },
-        },
+        runningText: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       },
       animation: {
-        modalEntry: "modalEntry 0.3s ease-out",
+        'running-text': 'runningText 20s linear infinite',
       },
     },
   },
-
   plugins: [],
 };

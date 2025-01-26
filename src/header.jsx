@@ -9,30 +9,18 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
+  // Running message 
+  const runningMessage = "Prajñā Package: 💰 Original Price Rs. 614/- | 🔥 Discounted Price Rs. 449/-| Prameya Package: 💰 Original Price Rs. 974/- | 💥 Discounted Price Rs. 699/- | 📚 6 Workshops | ";
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      // Determine scroll direction
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        setIsVisible(false);
-      } else {
-        // Scrolling up
-        setIsVisible(true);
-      }
-
-      // Update last scroll position
+      setIsVisible(currentScrollY <= lastScrollY);
       setLastScrollY(currentScrollY);
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   const navItems = [
@@ -51,7 +39,14 @@ const Header = () => {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* Running Message */}
+      <div className="w-full bg-red-600 text-white text-center p-2 text-sm overflow-hidden">
+        <div className="inline-block animate-running-text whitespace-nowrap">
+          {runningMessage.repeat(3)}
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
@@ -80,19 +75,19 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-gray-500 hover:text-gray-600"
+              className="text-gray-500 hover:text-gray-600 p-3 z-60"
             >
-              {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+              {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item, index) => (
                 <Link
