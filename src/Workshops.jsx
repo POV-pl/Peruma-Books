@@ -466,12 +466,15 @@ const WorkshopGallery = () => {
           )}
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-4 bg-white shadow-lg rounded-xl relative">
-          <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-            Shop The Package
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h1 className="text-3xl text-center sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800  mb-6">
+            Shop Package
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
             {workshopPackages.map((pkg) => (
-              <div key={pkg.id} className="bg-gray-50 p-6 rounded-xl">
+              <div
+                key={pkg.id}
+                className="bg-gray-50 p-6 rounded-xl border-2 border-blue-900"
+              >
                 <h3 className="text-xl font-semibold mb-4 text-blue-600">
                   {pkg.title} Package
                 </h3>
