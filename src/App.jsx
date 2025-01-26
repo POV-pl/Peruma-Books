@@ -5,10 +5,22 @@ import Footer from "./footer";
 import Logo from "./assests/PRM_Logo-removebg-preview.png";
 import Logo2 from "./assests/full-logo-peruma.png";
 import BookGallery from "./Books";
-import WorkshopGallery from "./Workshops";
+import WorkshopGallery from "./workshops";
 import CollaborationForm from "./collaborate";
 import Gallery from "./Gallery";
 import { Link } from "react-scroll";
+import "@fontsource/fredoka/400.css"; // Regular weight
+import "@fontsource/fredoka/500.css"; // Medium weight
+import "@fontsource/fredoka/600.css";
+import "@fontsource/quicksand/400.css"; // Regular weight
+import "@fontsource/quicksand/500.css"; // Medium weight
+import "@fontsource/quicksand/600.css";
+import "@fontsource/poppins/400.css"; // Regular
+import "@fontsource/poppins/700.css";
+import "@fontsource/inter/400.css"; // Regular
+import "@fontsource/inter/600.css"; // Semi-bold
+import "@fontsource/inter/700.css";
+import "@fontsource/comic-neue/700.css";
 
 const App = () => {
   return (

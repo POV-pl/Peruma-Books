@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/comic-neue": "^5.1.1",
+    "@fontsource/fredoka": "^5.1.1",
+    "@fontsource/inter": "^5.1.1",
+    "@fontsource/quicksand": "^5.1.1",
     "animate.css": "^4.1.1",
     "firebase": "^11.2.0",
     "framer-motion": "^11.18.2",
@@ -25,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@fontsource/poppins": "^5.1.1",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
