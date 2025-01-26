@@ -27,7 +27,7 @@ const ImageCarousel = () => {
       className="relative w-full min-h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px] 
                     max-h-[80vh] 
                     overflow-hidden 
-                    border-2 border-orange-600"
+                    border-y-2 border-orange-600"
     >
       {mobileImages.map((image, index) => (
         <div
