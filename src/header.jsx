@@ -35,8 +35,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed w-full z-50 bg-white shadow-md transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
+      className={`fixed w-full z-50 bg-white shadow-md transition-transform duration-500 ${
+        isVisible ? "translate-y-0 " : "-translate-y-full  "
       }`}
     >
       {/* Running Message */}
@@ -66,14 +66,14 @@ const Header = () => {
                 smooth
                 duration={500}
                 offset={-80}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 text-sm uppercase tracking-wide"
+                className="text-gray-700 hover:text-orange-600 font-medium transition-colors duration-300 text-sm uppercase tracking-wide"
               >
                 {item.title}
               </Link>
             ))}
-            <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300">
+            {/* <button className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300">
               Buy Now
-            </button>
+            </button> */}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -104,9 +104,9 @@ const Header = () => {
                   {item.title}
                 </Link>
               ))}
-              <button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300 mt-4">
+              {/* <button className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition-all duration-300 mt-4">
                 Buy Now
-              </button>
+              </button> */}
             </div>
           </div>
         )}
