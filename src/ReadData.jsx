@@ -133,7 +133,7 @@ export default function OwnerDataReader() {
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-blue-800">
-            Owner Data Dashboard
+            Collaboration Dashboard
           </h1>
           <div className="flex space-x-4">
             <button
@@ -152,7 +152,7 @@ export default function OwnerDataReader() {
         </div>
 
         {deletedItem && (
-          <div className="bg-orange-100 text-orange-800 p-4 rounded-lg mb-4 flex justify-between items-center">
+          <div className="bg-orange-100 text-orange-800 p-4 rounded-lg mb-4 flex justify-between items-center relative">
             <span>Item deleted. Undo available for 3 seconds.</span>
             <button
               onClick={handleUndo}
@@ -176,6 +176,7 @@ export default function OwnerDataReader() {
                   <th className="px-4 py-3 text-left">Email</th>
                   <th className="px-4 py-3 text-left">Phone</th>
                   <th className="px-4 py-3 text-left">Institution</th>
+                  <th className="px-4 py-3 text-left">Comments</th>
                   <th className="px-4 py-3 text-left">Actions</th>
                 </tr>
               </thead>
@@ -188,6 +189,7 @@ export default function OwnerDataReader() {
                     <td className="px-4 py-3">
                       {item.institutionName} ({item.institutionType})
                     </td>
+                    <td className="px-4 py-3">{item.additionalComments}</td>
                     <td className="px-4 py-3">
                       <button
                         onClick={() => handleDelete(item)}
