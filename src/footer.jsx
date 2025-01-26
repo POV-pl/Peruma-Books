@@ -71,7 +71,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 text-white py-8 md:py-16 mt-8 relative">
+      <footer className="bg-gradient-to-r from-blue-600 via-blue-900 to-blue-700 text-white py-8 md:py-16 mt-8 relative">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-lg font-semibold text-white">
             <div className="text-2xl md:text-3xl font-extrabold tracking-wide text-white flex items-center mb-4 md:mb-0">
