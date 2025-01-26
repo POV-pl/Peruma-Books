@@ -57,7 +57,7 @@ const CollaborationForm = () => {
     <div className="min-h-fit bg-gradient-to-br py-12 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
         {/* Header Section */}
-        <div className="bg-blue-600 px-6 py-8 text-white">
+        <div className="bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-8 text-white">
           <h2 className="text-3xl font-bold text-center">Let's Collaborate</h2>
           <p className="text-center mt-2 text-blue-100">
             Join us in creating something amazing together
@@ -211,7 +211,7 @@ const CollaborationForm = () => {
               className={`w-full p-4 text-white rounded-lg flex items-center justify-center space-x-2 transition-all ${
                 loading
                   ? "bg-gray-400"
-                  : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg"
+                  : "bg-gradient-to-r from-blue-500 to-blue-700 hover:shadow-lg"
               }`}
             >
               <svg

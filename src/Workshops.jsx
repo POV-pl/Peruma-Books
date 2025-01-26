@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import { GoArrowDown } from "react-icons/go";
 import {
   ChevronLeft,
   ChevronRight,
@@ -10,6 +12,7 @@ import {
   Folder,
   ShoppingCart,
   Tag,
+  Contact,
 } from "lucide-react";
 
 const WorkshopGallery = () => {
@@ -229,7 +232,7 @@ const WorkshopGallery = () => {
       <main className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-8 w-full relative">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">
+            <h1 className="text-3xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-800 mb-2">
               Cognitive Development Workshops
             </h1>
             <p className="text-gray-600">
@@ -242,7 +245,7 @@ const WorkshopGallery = () => {
             {workshopPackages.map((workshopPackage) => (
               <div
                 key={workshopPackage.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
+                className="bg-white rounded-xl p-2 shadow-lg overflow-hidden  hover:scale-105 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
                 onClick={() => {
                   setSelectedPackage(workshopPackage);
                   setSelectedWorkshop(null);
@@ -282,7 +285,7 @@ const WorkshopGallery = () => {
                           </span>
                         </div>
                       </div>
-                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                      <button className="px-4 py-2 bg-blue-900 text-white  rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">
                         <ShoppingCart className="w-5 h-5" />
                         View Package
                       </button>
@@ -464,7 +467,7 @@ const WorkshopGallery = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-4 bg-white shadow-lg rounded-xl relative">
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-            Workshop Package Comparison
+            Shop The Package
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {workshopPackages.map((pkg) => (
@@ -487,11 +490,23 @@ const WorkshopGallery = () => {
                     <span>Number of Workshops</span>
                     <span>{pkg.workshops.length}</span>
                   </div>
-                  <div className="pt-4">
-                    <button className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
-                      <ShoppingCart className="w-5 h-5" />
-                      Purchase Package
-                    </button>
+                  <div className="flex justify-center items-center gap-4 font-semibold">
+                    To pusrchase the package{" "}
+                    <span className="text-blue-800">
+                      <GoArrowDown />
+                    </span>
+                  </div>
+                  <div className="flex justify-center lg:justify-start pt-4">
+                    <Link
+                      to={"contact"}
+                      smooth
+                      duration={500}
+                      offset={-80}
+                      className="w-full py-2  bg-blue-900 text-white px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2"
+                    >
+                      <Contact className="w-5 h-5" />
+                      Contact us
+                    </Link>
                   </div>
                 </div>
               </div>
