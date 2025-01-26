@@ -118,7 +118,7 @@ const AboutUs = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-comic text-gray-800 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
               Welcome to PERUMA
             </h1>
             <p className="text-xl text-gray-600 mb-10 px-4 leading-relaxed font-medium">
