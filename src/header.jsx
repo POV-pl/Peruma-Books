@@ -9,8 +9,9 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Running message 
-  const runningMessage = "Prajñā Package: 💰 Original Price Rs. 614/- | 🔥 Discounted Price Rs. 449/-| Prameya Package: 💰 Original Price Rs. 974/- | 💥 Discounted Price Rs. 699/- | 📚 6 Workshops | ";
+  // Running message
+  const runningMessage =
+    "Prajñā Package: 💰 Original Price Rs. 614/- | 🔥 Discounted Price Rs. 449/-| Prameya Package: 💰 Original Price Rs. 974/- | 💥 Discounted Price Rs. 699/- | 📚 6 Workshops | ";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,10 +41,12 @@ const Header = () => {
       }`}
     >
       {/* Running Message */}
-      <div className="w-full bg-red-600 text-white text-center p-2 text-sm overflow-hidden">
-        <div className="inline-block animate-running-text whitespace-nowrap">
-          {runningMessage.repeat(3)}
-        </div>
+      <div className="w-full bg-blue-600 hover:bg-orange-600 text-white text-center p-2 cursor-pointer text-sm overflow-hidden">
+        <Link to={"workshops"} smooth duration={500} offset={-80}>
+          <div className="inline-block animate-running-text whitespace-nowrap">
+            {runningMessage.repeat(3)}
+          </div>
+        </Link>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
