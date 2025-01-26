@@ -19,7 +19,7 @@ const App = () => {
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50" />
         <div
-          className="absolute inset-0 opacity-[0.03] bg-center bg-no-repeat bg-contain hidden lg:block"
+          className="absolute inset-0 opacity-[0.04] bg-center bg-no-repeat bg-contain block lg:block"
           style={{
             backgroundImage: `url(${Logo2})`,
           }}
@@ -90,9 +90,9 @@ const App = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 {[
                   { number: "13+", label: "Educational Books" },
-                  { number: "1000+", label: "Happy Students" },
-                  { number: "100+", label: "Schools" },
-                  { number: "15+", label: "Years Experience" },
+                  { number: "100+", label: "Happy Students" },
+                  { number: "25+", label: "Schools" },
+                  { number: "2+", label: "Years Experience" },
                 ].map((stat, index) => (
                   <div
                     key={index}
