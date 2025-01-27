@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Header from "./header";
 import AboutUs from "./AboutUs";
 import Footer from "./footer";
@@ -8,6 +9,43 @@ import WorkshopGallery from "./workshops";
 import CollaborationForm from "./collaborate";
 import Gallery from "./Gallery";
 import ImageCarousel from "./imagescrol";
+
+const StatisticsSection = () => {
+  const stats = [
+    { number: "13+", label: "Educational Books" },
+    { number: "100+", label: "Happy Students" },
+    { number: "25+", label: "Schools" },
+    { number: "2+", label: "Years Experience" },
+  ];
+
+  return (
+    <div className="relative z-10 bg-gradient-to-br from-blue-900/90 to-blue-800 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, translateY: 20 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{
+                delay: index * 0.2,
+                duration: 0.5,
+              }}
+              className="p-4 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300"
+            >
+              <div className="text-3xl font-bold mb-2 text-cyan-300">
+                {stat.number}
+              </div>
+              <div className="text-sm uppercase tracking-wider text-blue-100">
+                {stat.label}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const App = () => {
   return (
@@ -28,36 +66,10 @@ const App = () => {
       <main className="flex-1 lg:mt-16">
         <section className="relative pt-24 md:pt-16">
           <ImageCarousel />
-          {/* Statistics Section */}
-          <div className="relative z-10 bg-blue-900 text-white py-12 ">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                {[
-                  { number: "13+", label: "Educational Books" },
-                  { number: "100+", label: "Happy Students" },
-                  { number: "25+", label: "Schools" },
-                  { number: "2+", label: "Years Experience" },
-                ].map((stat, index) => (
-                  <div
-                    key={index}
-                    className="p-4 transform transition-all duration-300 hover:-translate-y-1 animate-stats"
-                    style={{
-                      animationDelay: `${index * 100}ms`,
-                    }}
-                  >
-                    <div className="text-2xl md:text-3xl font-bold mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-blue-100 text-sm md:text-base">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <StatisticsSection />
         </section>
       </main>
+
       <section id="about-us" className="px-4">
         <AboutUs />
       </section>
@@ -74,70 +86,6 @@ const App = () => {
         <CollaborationForm />
       </section>
 
-      <style jsx global>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
-        }
-
-        @keyframes fadeSlideUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-
-        .animate-fade-in {
-          animation: fadeIn 0.6s ease-out forwards;
-        }
-
-        .animate-title {
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out forwards;
-        }
-
-        .animate-content {
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.2s forwards;
-        }
-
-        .animate-content-delayed {
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.3s forwards;
-        }
-
-        .animate-button {
-          opacity: 0;
-          animation: fadeSlideUp 0.8s ease-out 0.4s forwards;
-        }
-
-        .animate-stats {
-          opacity: 0;
-          animation: fadeSlideUp 0.6s ease-out forwards;
-        }
-      `}</style>
       <section id="contact">
         <Footer />
       </section>

@@ -22,3 +22,21 @@
 .animate-smooth-image {
   animation: smoothImageAppear 0.8s ease-out forwards;
 }
+@font-face {
+  font-family: 'Peruma';
+  src: url('peruma-logo.woff2') format('woff2'),
+       url('peruma-logo.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.peruma-logo {
+  font-family: 'Peruma', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #333;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+}

@@ -83,7 +83,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden font-sans">
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.img
           src={Logo}
