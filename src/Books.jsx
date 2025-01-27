@@ -338,30 +338,7 @@ const BookGallery = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 relative">
-          {[
-            { icon: BookOpen, title: "Total Books", value: books.length },
-            { icon: User, title: "Author", value: "Dr. Pushpalatha G S" },
-            { icon: Mail, title: "Contact", value: "perumabooks@gmail.com" },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl overflow-auto shadow-lg p-6 flex items-center space-x-4 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="bg-blue-100 p-3 rounded-lg">
-                <stat.icon className="w-6 h-6 text-blue-600 sm:text-sm md:text-sm lg:text-lg" />
-              </div>
-              <div>
-                <p className="text-blue-600 font-medium sm:text-sm md:text-lg lg:text-lg">
-                  {stat.title}
-                </p>
-                <p className="font-semibold text-blue-1000 sm:text-sm md:text-sm lg:text-lg">
-                  {stat.value}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+       
 
         {/* Featured Books Heading */}
         <div className="relative mb-8">

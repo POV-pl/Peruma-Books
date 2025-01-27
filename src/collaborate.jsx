@@ -101,10 +101,11 @@ const CollaborationForm = () => {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Institution Type <span className="text-orange-500">*</span>
+                  Institution/Business Type{" "}
+                  <span className="text-orange-500">*</span>
                 </label>
                 <select
                   name="institutionType"
@@ -123,7 +124,8 @@ const CollaborationForm = () => {
 
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Institution Name <span className="text-orange-500">*</span>
+                  Institution/Business Name{" "}
+                  <span className="text-orange-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -134,6 +136,9 @@ const CollaborationForm = () => {
                   required
                 />
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                   Name <span className="text-orange-500">*</span>
@@ -147,9 +152,6 @@ const CollaborationForm = () => {
                   required
                 />
               </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
                   Email <span className="text-orange-500">*</span>
