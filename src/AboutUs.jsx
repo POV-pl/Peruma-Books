@@ -38,7 +38,7 @@ const AboutUs = () => {
     {
       title: "Collaborative Spirit",
       description:
-        "Our educational resources foster robust teamwork environments. Students develop crucial interpersonal communication skills through structured group activities.",
+        "Our Innovative activity books foster robust teamwork environments. Students develop crucial interpersonal communication skills through structured group activities.",
       icon: Network,
     },
   ];
@@ -122,10 +122,10 @@ const AboutUs = () => {
               Welcome to PERUMA
             </h1>
             <p className="text-xl text-gray-600 mb-10 px-4 leading-relaxed font-serif">
-              We specialize in creating innovative educational materials for
-              Schools, NGOs, and Distributers. Our focus is on Activity-Based
-              Learning (ABL) that makes education engaging, interactive, and
-              meaningful.
+              We specialize in creating innovative educational activity books
+              for Schools, NGOs, and Distributers. Our focus is on
+              Activity-Based Learning (ABL) that makes education engaging,
+              interactive, and meaningful.
             </p>
           </motion.div>
         </div>

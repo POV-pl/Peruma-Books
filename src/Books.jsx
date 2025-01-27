@@ -330,10 +330,10 @@ const BookGallery = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Educational Book Collection
+            Innovative Activity Books
           </h1>
           <p className="text-lg text-blue-500">
-            Discover our comprehensive range of learning materials
+            Discover our comprehensive range of innoavtive activity books
           </p>
         </div>
 
@@ -379,7 +379,8 @@ const BookGallery = () => {
           </div>
           <div className="text-center mt-4">
             <p className="text-blue-1000">
-              Explore our handpicked selection of educational materials
+              Explore our handpicked selection of innovative educational
+              activity books
             </p>
           </div>
         </div>

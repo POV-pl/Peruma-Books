@@ -12,7 +12,7 @@ import ImageCarousel from "./imagescrol";
 
 const StatisticsSection = () => {
   const stats = [
-    { number: "13+", label: "Educational Books" },
+    { number: "13+", label: "Innovative activity Books" },
     { number: "100+", label: "Happy Students" },
     { number: "25+", label: "Schools" },
     { number: "2+", label: "Years Experience" },

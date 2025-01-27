@@ -142,16 +142,10 @@ const Footer = () => {
 
               <div className="space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-blue-800">
-                  Our Book Services
+                  Our Services
                 </h3>
                 <ul className="text-xs md:text-sm text-gray-700 space-y-1">
-                  {[
-                    "Online Book Store",
-                    "E-book Collections",
-                    "Book Recommendation Engine",
-                    "Literary Events & Workshops",
-                    "Book Club Memberships",
-                  ].map((service, index) => (
+                  {["Online Book Store", "Workshops"].map((service, index) => (
                     <li key={index} className="flex items-center">
                       <span className="text-blue-600 mr-2">•</span>
                       {service}
