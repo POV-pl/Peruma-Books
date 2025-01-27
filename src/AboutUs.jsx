@@ -118,12 +118,12 @@ const AboutUs = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+            <h1 className="text-4xl md:text-5xl font-serif font-extrabold text-gray-800 mb-8">
               Welcome to PERUMA
             </h1>
-            <p className="text-xl text-gray-600 mb-10 px-4 leading-relaxed font-medium">
+            <p className="text-xl text-gray-600 mb-10 px-4 leading-relaxed font-serif">
               We specialize in creating innovative educational materials for
-              Schools, NGOs, and Publishers. Our focus is on Activity-Based
+              Schools, NGOs, and Distributers. Our focus is on Activity-Based
               Learning (ABL) that makes education engaging, interactive, and
               meaningful.
             </p>
@@ -154,10 +154,10 @@ const AboutUs = () => {
                         className: "text-blue-700 stroke-[1.5]",
                       })}
                     </div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-4 md:mb-6">
+                    <h4 className="text-2xl md:text-3xl font-bold text-gray-800 text-center font-serif  mb-4 md:mb-6">
                       {benefits[currentIndex].title}
                     </h4>
-                    <p className="text-base md:text-xl text-gray-700 text-justify leading-relaxed font-medium">
+                    <p className="text-base md:text-xl text-gray-700  leading-relaxed font-serif text-center font-medium">
                       {benefits[currentIndex].description}
                     </p>
                   </div>

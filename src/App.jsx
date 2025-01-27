@@ -11,7 +11,7 @@ import ImageCarousel from "./imagescrol";
 
 const App = () => {
   return (
-    <div className="min-h-screen flex flex-col ">
+    <div className="min-h-screen flex flex-col font-serif ">
       <Header />
 
       {/* Main background with subtle gradient */}

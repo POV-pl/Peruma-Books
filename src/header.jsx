@@ -39,9 +39,9 @@ const Header = () => {
       }`}
     >
       <div className="w-full bg-blue-600 hover:bg-orange-600 text-white text-center p-2 cursor-pointer text-sm overflow-hidden">
-        <Link to={"workshops"} smooth duration={500} offset={-80}>
+        <Link to={"workshops"} smooth duration={900} offset={-80}>
           <div className="animate-marquee whitespace-nowrap inline-block">
-            {runningMessage.repeat(5)}
+            {runningMessage.repeat(3)}
           </div>
         </Link>
       </div>

@@ -168,7 +168,7 @@ const Footer = () => {
                   <div className="flex items-center">
                     <FaEnvelope className="mr-2 text-blue-600 flex-shrink-0" />
                     <a
-                      href="mailto:perumabooks@gmail.com"
+                      href="perumabooks@gmail.com"
                       className="hover:text-blue-800 transition duration-300 truncate"
                     >
                       perumabooks@gmail.com
