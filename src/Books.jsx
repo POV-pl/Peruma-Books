@@ -338,7 +338,6 @@ const BookGallery = () => {
         </div>
 
         {/* Stats Section */}
-       
 
         {/* Featured Books Heading */}
         <div className="relative mb-8">
