@@ -347,7 +347,7 @@ const BookGallery = () => {
           <div className="relative flex justify-center">
             <div className="bg-gradient-to-b from-white to-blue-50 px-4 flex items-center space-x-2">
               <Star className="w-6 h-6 text-blue-900" />
-              <h2 className="text-3xl font-bold text-blue-900">
+              <h2 className="text-3xl font-bold text-center text-blue-900">
                 Featured Books
               </h2>
               <Star className="w-6 h-6 text-blue-900" />
