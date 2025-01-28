@@ -49,7 +49,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Hidden Words through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -61,7 +61,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop on Construct Words helps to form new words through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -73,7 +73,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop on Inspiring Personalities teaches valuable life lessons.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -85,7 +85,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop on Wisdom in words, a collection of inspiring quotes.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -97,7 +97,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop on Trace the patterns, improves Handwriting.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -108,7 +108,7 @@ const WorkshopGallery = () => {
           images: ["../workshop/wok10.png"],
           description: "Intensive workshop on Mandala Art for Balancing hands.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         }, // Other workshops (unchanged)
@@ -131,7 +131,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Sudoku, number game and problem solving concepts through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -143,7 +143,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Numbers, from simple to complex concepts through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -155,7 +155,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Math puzzles,improves problem solving skills through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -167,7 +167,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Grpahs,charting the self data through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -179,7 +179,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Cryptic Messages,learn secret code concepts through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
@@ -191,7 +191,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Binary Coding Activities,get better understanding of coding concepts through interactive activities.",
           date: "Upcoming",
-          capacity: 10 - 100,
+          capacity: "10 - 100",
           duration: "3 days",
           location: "Tech Hub, Downtown",
         },
