@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Link as RouterLink } from "react-router-dom";
-import Logo1 from "./assests/PRM_Logo-removebg-preview.png";
-import Logo2 from "./assests/full-logo-peruma.png";
+import AnimatedLogo from "./animatedLogo";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,22 +56,9 @@ const Header = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="flex justify-between items-center py-4">
-          <RouterLink to="/owner-data" className="block w-40 h-16 relative">
-            <img
-              src={Logo1}
-              alt="PRM Logo 1"
-              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
-                activeLogo === 0 ? "opacity-100" : "opacity-0"
-              }`}
-            />
-            <img
-              src={Logo2}
-              alt="PRM Logo 2"
-              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
-                activeLogo === 1 ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          </RouterLink>
+          <div className="flex items-center">
+            <AnimatedLogo />
+          </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
