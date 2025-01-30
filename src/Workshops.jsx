@@ -48,10 +48,9 @@ const WorkshopGallery = () => {
           images: ["../workshop/wok9.png"],
           description:
             "Intensive workshop exploring Hidden Words through interactive activities.",
-          date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 2,
@@ -63,7 +62,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 3,
@@ -75,7 +74,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 4,
@@ -87,7 +86,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 5,
@@ -99,7 +98,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 6,
@@ -110,7 +109,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         }, // Other workshops (unchanged)
       ],
     },
@@ -133,7 +132,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 2,
@@ -145,7 +144,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 3,
@@ -157,7 +156,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 4,
@@ -169,7 +168,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 5,
@@ -181,7 +180,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
         {
           id: 6,
@@ -193,7 +192,7 @@ const WorkshopGallery = () => {
           date: "Upcoming",
           capacity: "10 - 100",
           duration: "3 days",
-          location: "Tech Hub, Downtown",
+          location: "Schools/ NGO's / Activity Clubs",
         },
       ],
     },
@@ -336,10 +335,7 @@ const WorkshopGallery = () => {
                           <span className="text-blue-600 font-bold">
                             {workshop.price}
                           </span>
-                          <div className="flex items-center gap-2 text-gray-600">
-                            <Calendar className="w-4 h-4" />
-                            <span>{workshop.date}</span>
-                          </div>
+                          <div className="flex items-center gap-2 text-gray-600"></div>
                         </div>
                       </div>
                     </div>
@@ -418,14 +414,8 @@ const WorkshopGallery = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        <Users className="w-5 h-5 text-blue-600" />
-                        <span>Instructor: {selectedWorkshop.instructor}</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <Calendar className="w-5 h-5 text-blue-600" />
-                        <span>{selectedWorkshop.date}</span>
-                      </div>
+                      <div className="flex items-center gap-3"></div>
+                      <div className="flex items-center gap-3"></div>
                       <div className="flex items-center gap-3">
                         <Clock className="w-5 h-5 text-blue-600" />
                         <span>Duration: {selectedWorkshop.duration}</span>

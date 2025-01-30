@@ -127,8 +127,9 @@ const Footer = () => {
                 <div className="text-xs md:text-sm text-gray-700 space-y-2">
                   <div className="flex items-center">
                     <FaMapMarkerAlt className="mr-2 text-blue-600 flex-shrink-0" />
-                    <span className="truncate">
-                      #302, Book Haven Complex, Literature Lane, Bangalore-72
+                    <span className="break-words">
+                      No 9, 1st main road, 11th cross, NGEF Layout, 2nd stage
+                      Nagarbhavi
                     </span>
                   </div>
                   <div className="flex items-center">

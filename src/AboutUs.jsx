@@ -123,7 +123,7 @@ const AboutUs = () => {
             </h1>
             <p className="text-xl text-gray-600 mb-10 px-4 leading-relaxed font-serif">
               We specialize in creating innovative educational activity books
-              for Schools, NGOs, and Distributers. Our focus is on
+              for Schools, NGOs, and Educational activity clubs. Our focus is on
               Activity-Based Learning (ABL) that makes education engaging,
               interactive, and meaningful.
             </p>

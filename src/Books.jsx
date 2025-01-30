@@ -32,7 +32,7 @@ const BookGallery = () => {
         "Coding concepts 🔹 Instructions 🔹 Quiz 🔹 Answers 🔹 120 Activities 🔹 Illustrations 🔹 Self-assessment Activity",
       highlights: [
         "120 Coding Activities",
-        "Self-assessment Modules",
+        "Self-assessment Activity",
         "Illustrated Examples",
         "Interactive Learning",
       ],
@@ -74,9 +74,9 @@ const BookGallery = () => {
         "Covers 30 Personalities 🔹 Highlights education, field of work, lifestyle, achievements, and legacy 🔹 Quiz 🔹 Answers",
       highlights: [
         "30 Inspiring Stories",
-        "Detailed Biographies",
+        "Simple Biographies",
         "Achievement Highlights",
-        "Educational Journey",
+        "Life Journey",
       ],
     },
     {
@@ -140,6 +140,7 @@ const BookGallery = () => {
         "Logic First Approach",
         "Simple Materials",
         "Clear Instructions",
+        "Simple Concepts, Popular number series",
       ],
     },
     {
@@ -157,7 +158,7 @@ const BookGallery = () => {
       description:
         "Concept of motivational quotes 🔹 90+ Quotes 🔹 Quiz 🔹 Answers",
       highlights: [
-        "Find your quotes",
+        "Matching quotes activity",
         "Motivational",
         "Develops perspective",
         "Positive thinking",
@@ -220,6 +221,7 @@ const BookGallery = () => {
       description:
         "Motor Skill improvement and Colouring Concepts🔹 Instructions 🔹 30 Activities 🔹 Self-assessment Activity 🔹Easy, Medium, Hard Levels",
       highlights: [
+        "Activities For left and right hands",
         "Cognitive skills",
         "Balanced Hand Motions",
         "Attention span",
@@ -261,7 +263,7 @@ const BookGallery = () => {
       ],
       description: "Handwriting improvement concept 🔹 50+ Activites",
       highlights: [
-        "TDrawing skills",
+        "Drawing skills",
         "Fine motor skills",
         "Focus and concentration",
         "Symmetry and Geometry",

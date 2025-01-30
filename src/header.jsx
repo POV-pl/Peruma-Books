@@ -28,7 +28,7 @@ const Header = () => {
     { title: "Books", link: "books" },
     { title: "Workshops", link: "workshops" },
     { title: "Gallery", link: "gallery" },
-    { title: "Lets Collaborate", link: "collaborate" },
+    { title: "Let's Collaborate", link: "collaborate" },
     { title: "Contact", link: "contact" },
   ];
 
