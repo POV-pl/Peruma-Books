@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link as RouterLink } from "react-router-dom";
-import Logo from "./assests/PRM_Logo-removebg-preview.png";
+import Logo1 from "./assests/PRM_Logo-removebg-preview.png";
+import Logo2 from "./assests/full-logo-peruma.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [currentLogo, setCurrentLogo] = useState(Logo1);
 
   const runningMessage =
     "Prajñā Package: 💰 Original Price Rs. 614/- | 🔥 Discounted Price Rs. 449/-| Prameya Package: 💰 Original Price Rs. 974/- | 💥 Discounted Price Rs. 699/- | 📚 6 Workshops | ";
@@ -23,12 +25,20 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentLogo((prevLogo) => (prevLogo === Logo1 ? Logo2 : Logo1));
+    }, 3000); // Change logo every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
+
   const navItems = [
     { title: "About Us", link: "about-us" },
     { title: "Books", link: "books" },
     { title: "Workshops", link: "workshops" },
     { title: "Gallery", link: "gallery" },
-    { title: "Let's Collaborate", link: "collaborate" },
+    { title: "Lets Collaborate", link: "collaborate" },
     { title: "Contact", link: "contact" },
   ];
 
@@ -50,7 +60,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <RouterLink to="/owner-data">
-              <img src={Logo} alt="PRM Logo" className="h-14 w-auto" />
+              <img src={currentLogo} alt="PRM Logo" className="h-14 w-auto" />
             </RouterLink>
           </div>
 
