@@ -9,7 +9,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [currentLogo, setCurrentLogo] = useState(Logo1);
+  const [activeLogo, setActiveLogo] = useState(0);
 
   const runningMessage =
     "Prajñā Package: 💰 Original Price Rs. 614/- | 🔥 Discounted Price Rs. 449/-| Prameya Package: 💰 Original Price Rs. 974/- | 💥 Discounted Price Rs. 699/- | 📚 6 Workshops | ";
@@ -27,10 +27,10 @@ const Header = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentLogo((prevLogo) => (prevLogo === Logo1 ? Logo2 : Logo1));
-    }, 3000); // Change logo every 3 seconds
+      setActiveLogo((prev) => (prev === 0 ? 1 : 0));
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, []);
 
   const navItems = [
@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 bg-white shadow-md transition-transform duration-500 ${
-        isVisible ? "translate-y-0 " : "-translate-y-full  "
+        isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="w-full bg-blue-600 hover:bg-orange-600 text-white text-center p-2 cursor-pointer text-sm overflow-hidden">
@@ -58,11 +58,22 @@ const Header = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <RouterLink to="/owner-data">
-              <img src={currentLogo} alt="PRM Logo" className="h-14 w-auto" />
-            </RouterLink>
-          </div>
+          <RouterLink to="/owner-data" className="block w-40 h-16 relative">
+            <img
+              src={Logo1}
+              alt="PRM Logo 1"
+              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+                activeLogo === 0 ? "opacity-100" : "opacity-0"
+              }`}
+            />
+            <img
+              src={Logo2}
+              alt="PRM Logo 2"
+              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
+                activeLogo === 1 ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          </RouterLink>
 
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
@@ -72,16 +83,11 @@ const Header = () => {
                   smooth
                   duration={500}
                   offset={-80}
-                  className="relative text-gray-700 hover:text-blue-800 font-medium 
-                    text-sm uppercase tracking-wide z-10 block"
+                  className="relative text-gray-700 hover:text-blue-800 font-medium text-sm uppercase tracking-wide z-10 block"
                 >
                   {item.title}
                 </Link>
-                <span
-                  className="absolute left-0 top-0 w-full h-full bg-gradient-to-br from-blue-300 
-                    to-blue-500 rounded-full opacity-0 group-hover:opacity-50 
-                    transition-opacity duration-300 z-0"
-                ></span>
+                <span className="absolute left-0 top-0 w-full h-full bg-gradient-to-br from-blue-300 to-blue-500 rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></span>
               </div>
             ))}
           </nav>
@@ -106,17 +112,12 @@ const Header = () => {
                     smooth
                     duration={500}
                     offset={-80}
-                    className="block px-3 py-2 text-gray-700 hover:text-blue-800 
-                      font-medium z-10 relative"
+                    className="block px-3 py-2 text-gray-700 hover:text-blue-800 font-medium z-10 relative"
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.title}
                   </Link>
-                  <span
-                    className="absolute left-3 top-0 w-[calc(100%-1.5rem)] h-full 
-                      bg-gradient-to-br from-blue-300 to-blue-500 rounded-full opacity-0 
-                      group-hover:opacity-50 transition-opacity duration-300 z-0"
-                  ></span>
+                  <span className="absolute left-3 top-0 w-[calc(100%-1.5rem)] h-full bg-gradient-to-br from-blue-300 to-blue-500 rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-300 z-0"></span>
                 </div>
               ))}
             </div>
