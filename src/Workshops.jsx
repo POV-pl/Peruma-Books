@@ -40,6 +40,8 @@ const WorkshopGallery = () => {
         "Includes 6 innovative activities: Hidden words, Construct words, Inspiring Personalities, Wisdom in words, Trace the patterns, Mandala art",
       originalPrice: "Rs. 614/-",
       discountPrice: "Rs. 449/-",
+      shortTermDuration: "8 Hours",
+      completeDuration: "60 Hours",
       workshops: [
         {
           id: 1,
@@ -49,7 +51,7 @@ const WorkshopGallery = () => {
           description:
             "Intensive workshop exploring Hidden Words through interactive activities.",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -61,7 +63,7 @@ const WorkshopGallery = () => {
             "Intensive workshop on Construct Words helps to form new words through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -73,7 +75,7 @@ const WorkshopGallery = () => {
             "Intensive workshop on Inspiring Personalities teaches valuable life lessons.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -85,7 +87,7 @@ const WorkshopGallery = () => {
             "Intensive workshop on Wisdom in words, a collection of inspiring quotes.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -97,7 +99,7 @@ const WorkshopGallery = () => {
             "Intensive workshop on Trace the patterns, improves Handwriting.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -108,7 +110,7 @@ const WorkshopGallery = () => {
           description: "Intensive workshop on Mandala Art for Balancing hands.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         }, // Other workshops (unchanged)
       ],
@@ -121,6 +123,8 @@ const WorkshopGallery = () => {
         "Includes 6 innovative activities: Sudoku, Numbers, Math Puzzles, Graphs, Cryptic Messages, BCA",
       originalPrice: "Rs. 974/-",
       discountPrice: "Rs. 699/-",
+      shortTermDuration: "12 Hours",
+      completeDuration: "60 Hours",
       workshops: [
         {
           id: 1,
@@ -131,7 +135,7 @@ const WorkshopGallery = () => {
             "Intensive workshop exploring Sudoku, number game and problem solving concepts through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -143,7 +147,7 @@ const WorkshopGallery = () => {
             "Intensive workshop exploring Numbers, from simple to complex concepts through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -155,7 +159,7 @@ const WorkshopGallery = () => {
             "Intensive workshop exploring Math puzzles,improves problem solving skills through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -167,7 +171,7 @@ const WorkshopGallery = () => {
             "Intensive workshop exploring Grpahs,charting the self data through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -179,7 +183,7 @@ const WorkshopGallery = () => {
             "Intensive workshop exploring Cryptic Messages,learn secret code concepts through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
         {
@@ -191,7 +195,7 @@ const WorkshopGallery = () => {
             "Intensive workshop exploring Binary Coding Activities,get better understanding of coding concepts through interactive activities.",
           date: "Upcoming",
           capacity: "10 - 100",
-          duration: "3 days",
+          //duration: "3 days",
           location: "Schools/ NGO's / Activity Clubs",
         },
       ],
@@ -232,7 +236,7 @@ const WorkshopGallery = () => {
             {workshopPackages.map((workshopPackage) => (
               <div
                 key={workshopPackage.id}
-                className="bg-white rounded-xl p-2 shadow-lg overflow-hidden  hover:scale-105 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
+                className="bg-white rounded-xl p-2 shadow-lg overflow-hidden hover:scale-105 border-2 border-blue-900 transform transition-all duration-500 hover:-translate-y-1 hover:shadow-lg"
                 onClick={() => {
                   setSelectedPackage(workshopPackage);
                   setSelectedWorkshop(null);
@@ -253,29 +257,42 @@ const WorkshopGallery = () => {
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {workshopPackage.description}
                   </p>
-                  <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Folder className="w-5 h-5" />
-                      <span className="text-sm">
-                        {workshopPackage.workshops.length} Workshops
-                      </span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row items-center gap-4">
-                      <div className="flex items-center gap-2">
-                        <Tag className="w-5 h-5 text-red-500" />
-                        <div>
-                          <span className="text-gray-500 line-through text-sm mr-2">
-                            {workshopPackage.originalPrice}
-                          </span>
-                          <span className="text-blue-600 font-bold">
-                            {workshopPackage.discountPrice}
-                          </span>
-                        </div>
+                  <div className="flex flex-col gap-4">
+                    <div className="flex items-center gap-4 text-gray-600">
+                      <Clock className="w-5 h-5" />
+                      <div className="flex flex-col">
+                        <span className="text-sm">
+                          Short Term: {workshopPackage.shortTermDuration}
+                        </span>
+                        <span className="text-sm">
+                          Complete Course: {workshopPackage.completeDuration}
+                        </span>
                       </div>
-                      <button className="px-4 py-2 bg-blue-900 text-white  rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">
-                        <ShoppingCart className="w-5 h-5" />
-                        View Package
-                      </button>
+                    </div>
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Folder className="w-5 h-5" />
+                        <span className="text-sm">
+                          {workshopPackage.workshops.length} Workshops
+                        </span>
+                      </div>
+                      <div className="flex flex-col sm:flex-row items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <Tag className="w-5 h-5 text-red-500" />
+                          <div>
+                            <span className="text-gray-500 line-through text-sm mr-2">
+                              {workshopPackage.originalPrice}
+                            </span>
+                            <span className="text-blue-600 font-bold">
+                              {workshopPackage.discountPrice}
+                            </span>
+                          </div>
+                        </div>
+                        <button className="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">
+                          <ShoppingCart className="w-5 h-5" />
+                          View Package
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -416,10 +433,7 @@ const WorkshopGallery = () => {
                     <div className="space-y-3">
                       <div className="flex items-center gap-3"></div>
                       <div className="flex items-center gap-3"></div>
-                      <div className="flex items-center gap-3">
-                        <Clock className="w-5 h-5 text-blue-600" />
-                        <span>Duration: {selectedWorkshop.duration}</span>
-                      </div>
+                      <div className="flex items-center gap-3"></div>
                       <div className="flex items-center gap-3">
                         <MapPin className="w-5 h-5 text-blue-600" />
                         <span>Location: {selectedWorkshop.location}</span>
