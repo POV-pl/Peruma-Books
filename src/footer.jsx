@@ -80,7 +80,10 @@ const Footer = () => {
 
             <div className="flex space-x-6 md:space-x-8 items-center">
               {[
-                { Icon: FaInstagram, link: "https://www.instagram.com/peruma" },
+                {
+                  Icon: FaInstagram,
+                  link: "https://www.instagram.com/perumabooks/",
+                },
                 {
                   Icon: FaLinkedin,
                   link: "https://www.linkedin.com/company/peruma",
