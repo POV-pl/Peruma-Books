@@ -117,6 +117,7 @@ const CollaborationForm = () => {
                   <option value="">Select Type</option>
                   <option value="School">School</option>
                   <option value="NGO">NGO</option>
+                  <option value="Activity Club">Activity club</option>
                   <option value="Distributor">Distributor</option>
                   <option value="other">Other</option>
                 </select>
