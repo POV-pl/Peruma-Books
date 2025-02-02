@@ -88,7 +88,7 @@ const Footer = () => {
                   Icon: FaLinkedin,
                   link: "https://www.linkedin.com/company/peruma",
                 },
-                { Icon: FaTwitter, link: "https://www.twitter.com/peruma" },
+                { Icon: FaTwitter, link: "https://x.com/perumabooks" },
                 {
                   Icon: FaFileContract,
                   onClick: () => setIsTermsModalOpen(true),
