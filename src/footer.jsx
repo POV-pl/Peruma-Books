@@ -84,10 +84,7 @@ const Footer = () => {
                   Icon: FaInstagram,
                   link: "https://www.instagram.com/perumabooks/",
                 },
-                {
-                  Icon: FaLinkedin,
-                  link: "https://www.linkedin.com/company/peruma",
-                },
+                
                 { Icon: FaTwitter, link: "https://x.com/perumabooks" },
                 {
                   Icon: FaFileContract,

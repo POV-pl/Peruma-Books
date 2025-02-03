@@ -461,6 +461,10 @@ const WorkshopGallery = () => {
           <h1 className="text-3xl text-center sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800  mb-6">
             Shop Package
           </h1>
+          <div className=" text-center sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-500   mb-6">
+            Free Workshop will be conducted for NGO and Schools for purchase
+            over 20+ Packages
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
             {workshopPackages.map((pkg) => (
               <div
