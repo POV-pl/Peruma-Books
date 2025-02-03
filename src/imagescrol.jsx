@@ -20,7 +20,7 @@ const ImageCarousel = () => {
 
   return (
     <div
-      className="relative w-full min-h-[250px] sm:h-[400px] md:h-[600px] lg:h-[800px] 
+      className="relative w-full min-h-[240px] sm:h-[400px] md:h-[600px] lg:h-[800px] 
                     max-h-[80vh] 
                     overflow-hidden 
                     border-y-2 border-orange-600"
@@ -28,7 +28,7 @@ const ImageCarousel = () => {
       {mobileImages.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-all duration-1000 ease-in-out transform ${
+          className={`absolute inset-0 transition-all duration-1000 ease-in-out transform  ${
             index === currentIndex
               ? "opacity-100 scale-100 translate-x-0"
               : "opacity-0 scale-110 translate-x-full"
