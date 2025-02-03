@@ -125,14 +125,14 @@ const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
               <div className="space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-blue-800">
-                  Our Bookstore
+                  Office Address
                 </h3>
                 <div className="text-xs md:text-sm text-gray-700 space-y-2">
                   <div className="flex items-center">
                     <FaMapMarkerAlt className="mr-2 text-blue-600 flex-shrink-0" />
                     <span className="break-words">
                       No 9, 1st main road, 11th cross, NGEF Layout, 2nd stage
-                      Nagarbhavi
+                      Nagarbhavi, Bengaluru, Karnataka, India.
                     </span>
                   </div>
                   <div className="flex items-center">
