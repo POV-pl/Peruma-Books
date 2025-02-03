@@ -63,8 +63,8 @@ const App = () => {
         />
       </div>
 
-      <main className="flex-1 lg:mt-18 sm:mt-10">
-        <section className="relative pt-24 md:pt-16">
+      <main className="flex-1 lg:mt-18 sm:mt-16">
+        <section className="relative pt-28 md:pt-16">
           <ImageCarousel />
           <StatisticsSection />
         </section>
