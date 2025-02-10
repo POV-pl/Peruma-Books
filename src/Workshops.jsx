@@ -462,10 +462,13 @@ const WorkshopGallery = () => {
             Shop Package
           </h1>
           <div className=" text-center sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-500   mb-6">
-            Free Workshop will be conducted for NGO and Schools for purchase
-            over 20+ Packages
+            Free Workshop will be Provided for our Customers!
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+          <div className="text-center text-red-600 font-medium mb-6">
+            Note: Available for bulk orders only (minimum order quantity: 100)
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {workshopPackages.map((pkg) => (
               <div
                 key={pkg.id}
@@ -489,6 +492,10 @@ const WorkshopGallery = () => {
                     <span>Number of Workshops</span>
                     <span>{pkg.workshops.length}</span>
                   </div>
+                  <div className="flex justify-between items-center">
+                    <span>Minimum Order</span>
+                    <span>100 units</span>
+                  </div>
                   <div className="flex justify-center items-center gap-4 font-semibold">
                     To purchase the package{" "}
                     <span className="text-blue-800">
@@ -497,11 +504,11 @@ const WorkshopGallery = () => {
                   </div>
                   <div className="flex justify-center lg:justify-start pt-4">
                     <Link
-                      to={"contact"}
+                      to="contact"
                       smooth
                       duration={500}
                       offset={-80}
-                      className="w-full py-2  bg-blue-900 text-white px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2"
+                      className="w-full py-2 bg-blue-900 text-white px-4 rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center gap-2"
                     >
                       <Contact className="w-5 h-5" />
                       Contact us
