@@ -9,6 +9,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
   FaClock,
+  FaUsers,
 } from "react-icons/fa";
 
 const TermsModal = ({ isOpen, onClose }) => {
@@ -84,7 +85,6 @@ const Footer = () => {
                   Icon: FaInstagram,
                   link: "https://www.instagram.com/perumabooks/",
                 },
-
                 { Icon: FaTwitter, link: "https://x.com/perumabooks" },
                 {
                   Icon: FaFileContract,
@@ -119,7 +119,7 @@ const Footer = () => {
               isVisible ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-20">
               <div className="space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-blue-800">
                   Office Address
@@ -134,7 +134,7 @@ const Footer = () => {
                   </div>
                   <div className="flex items-center">
                     <FaClock className="mr-2 text-blue-600 flex-shrink-0" />
-                    <span className="truncate">
+                    <span className="break-words">
                       Mon-Sat: 10 AM - 8 PM | Sun: 11 AM - 6 PM
                     </span>
                   </div>
@@ -157,13 +157,31 @@ const Footer = () => {
 
               <div className="space-y-4">
                 <h3 className="text-lg md:text-xl font-semibold text-blue-800">
+                  Our Clients
+                </h3>
+                <ul className="text-xs md:text-sm text-gray-700 space-y-1">
+                  {["Schools", "Educational Activity Clubs", "NGOs"].map(
+                    (client, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="text-blue-600 mr-2">•</span>
+                        {client}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-lg md:text-xl font-semibold text-blue-800">
                   Contact Information
                 </h3>
                 <div className="text-xs md:text-sm text-gray-700 space-y-2">
                   <div className="flex items-center">
                     <FaEnvelope className="mr-2 text-blue-600 flex-shrink-0" />
                     <a
-                      href="perumabooks@gmail.com"
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=perumabooks@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="hover:text-blue-800 transition duration-300 truncate"
                     >
                       perumabooks@gmail.com
@@ -174,7 +192,7 @@ const Footer = () => {
                     <span>+91 86183 31380</span>
                   </div>
                   <div className="mt-2 text-xs text-gray-500">
-                    Support available: Mon-Sat, 9 AM - 6 PM
+                    Support available: Mon-Sat, 10 AM - 8 PM
                   </div>
                 </div>
               </div>
