@@ -133,7 +133,7 @@ const AuthorModal = ({ isOpen, onClose }) => {
             <div className="sticky top-8">
               <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden shadow-md mb-6">
                 <img
-                  src="src/assests/author.png"
+                  src="public/books/author.png"
                   alt="Author"
                   className="w-full h-full object-fill"
                 />
