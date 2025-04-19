@@ -101,7 +101,7 @@ const AuthorModal = ({ isOpen, onClose }) => {
       content: [
         "Published academic and research papers in the fields of cryptography, signal processing, Image processing etc. in reputed journals.",
         "Self-Publisher of Innovative Children's Activity Books.",
-        "Published Indian patent on research work.",
+
         "Granted one Indian design patent for social work.",
         "Teaching expertise in various subjects such as Cryptography, Signal processing, Image processing, Basic Electronics, Network theory, Information theory and coding, Hardware description language, MATLAB etc.",
         "Organised many activity-based workshops for students.",
