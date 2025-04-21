@@ -143,9 +143,7 @@ const AuthorModal = ({ isOpen, onClose }) => {
                 <h3 className="text-xl font-bold text-blue-700">
                   Dr. Pushpalatha G S
                 </h3>
-                <p className="text-gray-500 mb-4">
-                  Founder & Author at Peruma Books
-                </p>
+                <p className="text-gray-500 mb-4">Author at Peruma Books</p>
 
                 <div className="flex justify-center mt-4">
                   <a
@@ -162,10 +160,11 @@ const AuthorModal = ({ isOpen, onClose }) => {
           <div className="md:w-2/3 text-gray-700">
             <div className="p-5 bg-blue-50 rounded-lg mb-6">
               <p className="text-center italic text-blue-800">
-                "My mission is to create books that not only educate but also
+                "Our mission is to create books that not only educate but also
                 ignite curiosity and foster a love for learning in children.
-                Through storytelling, I aim to preserve our cultural heritage
-                while preparing young minds for the challenges of tomorrow."
+                Through activity books, by combining fun with learning, We aim
+                to provide a holistic approach to child development, promoting
+                intellectual, emotional and social growth."
               </p>
             </div>
 
@@ -298,7 +297,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold">Dr. Pushpalatha G S</h3>
-                  <p className="text-blue-100 text-sm">Founder & Author</p>
+                  <p className="text-blue-100 text-sm">Author</p>
                 </div>
               </div>
               <button
